@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card, Image } from 'react-bootstrap';
+import { Card, Image, Button } from 'react-bootstrap';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 const FoundItem = ({ item }) => (
@@ -14,6 +14,9 @@ const FoundItem = ({ item }) => (
     </Card.Header>
     <Card.Body>
       <Card.Text>{item.description}</Card.Text>
+      <div className="d-grid gap-2">
+        <Button variant="outline-success">Claim This Item</Button>{' '}
+      </div>
     </Card.Body>
   </Card>
 );
