@@ -29,11 +29,16 @@ const FoundItems = () => {
     image: 'https://images.journeys.com/images/products/1_623492_ZM.JPG',
     description: 'Black backpack with a laptop inside.',
   },
-  {
-    name: 'Laptop', category: 'Electronics', color: 'Silver', datePosted: '2023-10-10',
-    image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-silver-m1-2021_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1638575198000',
-    description: 'Silver macbook pro. Will need to know password to retrieve.',
-  },
+    {
+      name: 'Laptop', category: 'Electronics', color: 'Silver', datePosted: '2023-10-10',
+      image: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-silver-m1-2021_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1638575198000',
+      description: 'Silver macbook pro.',
+    },
+    {
+      name: 'Water Bottle', category: 'Miscellaneous', color: 'Blue', datePosted: '2023-10-10',
+      image: 'https://www.pcrichard.com/dw/image/v2/BFXM_PRD/on/demandware.static/-/Sites-pcrichard-master-product-catalog/default/dwf7580d25/images/hires/AZ2_YRAMBC36NB.jpg?sw=800&sh=800&sm=fit',
+      description: 'Blue Yeti bottle with a sticker on it.',
+    },
   ];
   return (ready ? (
     <Container className="py-3">
