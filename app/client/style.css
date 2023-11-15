@@ -12,7 +12,7 @@ body {
   background: fixed center url("images/background.png");
   --bs-dark: var(--matr-navbar-bg);
   --bs-dark-rgb: var(--matr-navbar-bg-rgb);
-  color: white !important;
+  color: white !important; /*sorry, i couldn't figure this out without using !important*/
 }
 
 #signin-page .alert-light, #signup-page .alert-light {
