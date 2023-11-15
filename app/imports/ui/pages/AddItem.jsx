@@ -11,7 +11,7 @@ const AddItem = () => (
         <Col>
           <Image src="/images/placeholder-image.jpeg" fluid alt="item image" />
         </Col>
-        <Col className="text-end">
+        <Col className="text-start">
           <Button variant="primary">Upload Image</Button>
         </Col>
       </Row>
@@ -20,6 +20,19 @@ const AddItem = () => (
           <Form.Group className="mb-3">
             <Form.Label>Name</Form.Label>
             <Form.Control placeholder="Enter Item Name" />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Category</Form.Label>
+            <Form.Select>
+              <option>Bag</option>
+              <option>Clothing</option>
+              <option>Electronics</option>
+              <option>Miscellaneous</option>
+            </Form.Select>
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Color</Form.Label>
+            <Form.Control placeholder="Enter Color" />
           </Form.Group>
           <Form.Group className="mb-3">
             <Form.Label>Location</Form.Label>
