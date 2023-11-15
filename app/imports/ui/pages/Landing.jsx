@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Container, Image, Row, Button } from 'react-bootstrap';
+import { Col, Container, Image, Row } from 'react-bootstrap';
 
 const Landing = () => (
   <Container id="landing-page" fluid className="py-5">
