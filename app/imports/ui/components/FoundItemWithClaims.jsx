@@ -18,12 +18,11 @@ const FoundItemWithClaims = ({ item }) => (
       </div>
       <div>
         <Card.Text>
-          {/* Map over claims and display first names */}
           {item.claims && item.claims.length > 0 ? (
             <div>
               <strong>Claimants:</strong>
               {item.claims.map((claim) => (
-                <div key={claim._id}>{claim.firstName} {claim.lastName}
+                <div key={claim._id}><strong>{claim.firstName} {claim.lastName}</strong>
                   <br />
                   Claimed on: {claim.createdAt.toLocaleDateString('en-US')}
                 </div>

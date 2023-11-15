@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
-import { Accordion, Col, Container, Row } from 'react-bootstrap';
+import { Accordion, Button, Col, Container, Row } from 'react-bootstrap';
 import { Stuffs } from '../../api/stuff/Stuff';
 import LoadingSpinner from '../components/LoadingSpinner';
 import FoundItemEdit from '../components/FoundItemEdit';
@@ -83,10 +83,13 @@ const Admin = () => {
     <Container className="py-3">
       <Row className="justify-content-center">
         <Col md={14}>
-          <Col className="text-center"><h2>Manage Lost Items</h2></Col>
+          <Row className="page-title-row align-items-center">
+            <Col className="text-start"><h2>Manage Lost Items</h2></Col>
+            <Col className="text-end"><Button variant="success">Add Item</Button></Col>
+          </Row>
           <Accordion defaultActiveKey={['0']} alwaysOpen>
             <Accordion.Item eventKey="0">
-              <Accordion.Header>Items with Claims</Accordion.Header>
+              <Accordion.Header><h5>Claimed Items</h5></Accordion.Header>
               <Accordion.Body>
                 <Row sm={1} md={2} lg={3} className="g-4">
                   {items.map((item) => <Col key={item._id}><FoundItemWithClaims item={item} /></Col>)}
@@ -94,7 +97,7 @@ const Admin = () => {
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="1">
-              <Accordion.Header>Items without Claims</Accordion.Header>
+              <Accordion.Header><h5>Unclaimed Items</h5></Accordion.Header>
               <Accordion.Body>
                 <Row sm={1} md={2} lg={3} className="g-4">
                   {items.map((item) => <Col key={item._id}><FoundItemEdit item={item} /></Col>)}

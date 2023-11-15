@@ -38,3 +38,15 @@ body .navbar {
 #landing-page-pic {
   padding: 50px 0 50px 40px;
 }
+
+.page-title-row {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.accordion-header {
+  --bs-accordion-active-bg: #668F80;
+  --bs-accordion-btn-bg: #848fa5;
+  --bs-accordion-active-color: #ffffff;
+  --bs-accordion-btn-color: #ffffff;
+}
