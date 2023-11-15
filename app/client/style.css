@@ -1,28 +1,52 @@
-/* Use Open Sans as the default sans serif font. */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Source+Code+Pro:300,400,500,700");
 
-/* Set up some CSS variables to theme the application. */
 :root {
-  --matr-navbar-bg: #ECECEC;
-  --matr-navbar-bg-rgb: 236, 236, 236;
+  --matr-navbar-bg: black;
+  --matr-navbar-bg-rgb: 13, 13, 13;
+  --matr-navbar-text-color: white;
+  --matr-navbar-highlight-text: khaki;
 }
 
-/* Change bootstrap variable values.
- See https://getbootstrap.com/docs/5.2/customize/css-variables/
- */
 body {
   --bs-light-rgb: var(--matr-navbar-bg-rgb);
+  background: fixed center url("images/background.png");
+  --bs-dark: var(--matr-navbar-bg);
+  --bs-dark-rgb: var(--matr-navbar-bg-rgb);
+  color: white !important; /*sorry, i couldn't figure this out without using !important*/
 }
 
-/* Set the alert background on the signin and signup pages. */
 #signin-page .alert-light, #signup-page .alert-light {
   --bs-alert-bg: var(--matr-navbar-bg);
 }
 
-/* Define custom styles */
-.gray-background {
-  background-color: var(--matr-navbar-bg);
-  color: var(--bs-dark);
-  padding-top: 10px;
-  padding-bottom: 20px;
+footer, footer a {
+  color: var(--matr-navbar-text-color);
+}
+
+body .navbar {
+  --bs-navbar-active-color: var(--matr-navbar-highlight-text);
+  --bs-navbar-brand-color: var(--matr-navbar-text-color);
+  --bs-navbar-brand-hover-color: var(--matr-navbar-highlight-text);
+  --bs-navbar-color: var(--matr-navbar-text-color);
+  --bs-navbar-hover-color: var(--matr-navbar-highlight-text);
+}
+
+.bg-dark a.dropdown-item {
+  color: var(--matr-navbar-bg);
+}
+
+#landing-page-pic {
+  padding: 50px 0 50px 40px;
+}
+
+.page-title-row {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.accordion-header {
+  --bs-accordion-active-bg: #668F80;
+  --bs-accordion-btn-bg: #848fa5;
+  --bs-accordion-active-color: #ffffff;
+  --bs-accordion-btn-color: #ffffff;
 }

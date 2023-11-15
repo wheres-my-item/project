@@ -1,19 +1,29 @@
 import React from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 
-/* A simple static component to render some text for the landing page. */
 const Landing = () => (
-  <Container id="landing-page" fluid className="py-3">
-    <Row className="align-middle text-center">
-      <Col xs={4}>
-        <Image roundedCircle src="/images/meteor-logo.png" width="150px" />
+  <Container id="landing-page" fluid className="py-5">
+    <Row className="align-items-center">
+      <Col md={6}>
+        <Image src="/images/landing-page-picture.png" fluid alt="landing page" />
       </Col>
+      <Col md={6}>
+        <h1 className="display-4 font-weight-bold mb-4">Lost Something? We&apos;re Here to Help!</h1>
 
-      <Col xs={8} className="d-flex flex-column justify-content-center">
-        <h1>Welcome to this template</h1>
-        <p>Now get to work and modify this app!</p>
+        <p className="lead mb-3">
+          Welcome to UH Manoa Lost and Found, the dedicated platform for the University of Hawaii at Manoa community. We&apos;re committed to helping you reconnect with your lost belongings.
+        </p>
+
+        <p className="mb-3">
+          Browse through our <strong>Lost Item List Page</strong> to find detailed descriptions and images.
+          As a logged-in user, you can submit and manage your claims. Our Admin team works diligently to maintain the
+          platform&apos;s integrity and prevent fraud.
+        </p>
+
+        <p className="mb-4">
+          Join our community today. <strong>Sign up</strong> or <strong>log in</strong> to start your search and assist others in finding their lost items. Together, we make finding lost stuff easier!
+        </p>
       </Col>
-
     </Row>
   </Container>
 );
