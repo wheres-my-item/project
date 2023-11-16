@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Image, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 const FoundItem = ({ item }) => (
@@ -15,7 +16,9 @@ const FoundItem = ({ item }) => (
     <Card.Body>
       <Card.Text>{item.description}</Card.Text>
       <div className="d-grid gap-2">
-        <Button variant="outline-success">Claim This Item</Button>{' '}
+        <Link to="/claim">
+          <Button variant="outline-success">Claim This Item</Button>{' '}
+        </Link>
       </div>
     </Card.Body>
   </Card>
