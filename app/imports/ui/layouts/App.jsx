@@ -18,6 +18,7 @@ import UserPage from '../pages/UserPage';
 import FoundItems from '../pages/FoundItems';
 import Admin from '../pages/Admin';
 import AddItem from '../pages/AddItem';
+import ClaimForm from '../pages/ClaimForm';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/home" element={<ProtectedRoute><Landing /></ProtectedRoute>} />
           <Route path="/userpage" element={<ProtectedRoute><UserPage /></ProtectedRoute>} />
           <Route path="/list" element={<ProtectedRoute><FoundItems /></ProtectedRoute>} />
+          <Route path="/claim" element={<ProtectedRoute><ClaimForm /></ProtectedRoute>} />
           <Route path="/add" element={<AdminProtectedRoute ready={ready}><AddItem /></AdminProtectedRoute>} />
           <Route path="/edit/:_id" element={<ProtectedRoute><EditStuff /></ProtectedRoute>} />
           <Route path="/admin" element={<AdminProtectedRoute ready={ready}><Admin /></AdminProtectedRoute>} />
