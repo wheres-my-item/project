@@ -85,7 +85,7 @@ const Admin = () => {
         <Col md={14}>
           <Row className="page-title-row align-items-center">
             <Col className="text-start"><h2>Manage Lost Items</h2></Col>
-            <Col className="text-end"><Button variant="success">Add Item</Button></Col>
+            <Col className="text-end"><Button variant="success" href="/add">Add Item</Button></Col>
           </Row>
           <Accordion defaultActiveKey={['0']} alwaysOpen>
             <Accordion.Item eventKey="0">
