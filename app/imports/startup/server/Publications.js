@@ -6,13 +6,19 @@ import { Items } from '../../api/items/Items';
 // User-level publication.
 // Publish all documents from all users.
 Meteor.publish(Items.userPublicationName, function () {
-  return Items.collection.find();
+  if (this.userId) {
+    return Items.collection.find();
+  }
+  return this.ready();
 });
 
 // Admin-level publication.
 // Publish all documents from all users.
 Meteor.publish(Items.adminPublicationName, function () {
-  return Items.collection.find();
+  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
+    return Items.collection.find();
+  }
+  return this.ready();
 });
 
 // User-level publication.
