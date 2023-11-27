@@ -6,7 +6,7 @@ import { Col, Container, Row, Image } from 'react-bootstrap';
 
 /* Renders the EditStuff page for editing a single document. */
 const UserPage = () => (
-  <Container className="py-3">
+  <Container id="user-page" className="py-3">
     <Row className="py-3 justify-content-center">
       <Col xs={3}>
         <Image rounded src="https://www.mithilahotel.com/gallery-images/properties/6/9/4/1580542728_LOST-FOUND-mobile_2.jpg" width={320} />

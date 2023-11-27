@@ -17,7 +17,7 @@ const FoundItem = ({ item }) => (
       <Card.Text>{item.description}</Card.Text>
       <div className="d-grid gap-2">
         <Link to="/claim">
-          <Button variant="outline-success">Claim This Item</Button>{' '}
+          <Button id="claim-button" variant="outline-success">Claim This Item</Button>{' '}
         </Link>
       </div>
     </Card.Body>

@@ -80,16 +80,16 @@ const Admin = () => {
     };
   }, []);
   return (ready ? (
-    <Container className="py-3">
+    <Container id="admin-page" className="py-3">
       <Row className="justify-content-center">
         <Col md={14}>
           <Row className="page-title-row align-items-center">
             <Col className="text-start"><h2>Manage Lost Items</h2></Col>
-            <Col className="text-end"><Button variant="success" href="/add">Add Item</Button></Col>
+            <Col className="text-end"><Button id="add-item-button" variant="success" href="/add">Add Item</Button></Col>
           </Row>
           <Accordion defaultActiveKey={['0']} alwaysOpen>
             <Accordion.Item eventKey="0">
-              <Accordion.Header><h5>Claimed Items</h5></Accordion.Header>
+              <Accordion.Header id="claimed-items-button"><h5>Claimed Items</h5></Accordion.Header>
               <Accordion.Body>
                 <Row sm={1} md={2} lg={3} className="g-4">
                   {items.map((item) => <Col key={item._id}><FoundItemWithClaims item={item} /></Col>)}
@@ -97,7 +97,7 @@ const Admin = () => {
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="1">
-              <Accordion.Header><h5>Unclaimed Items</h5></Accordion.Header>
+              <Accordion.Header id="unclaimed-items-button"><h5>Unclaimed Items</h5></Accordion.Header>
               <Accordion.Body>
                 <Row sm={1} md={2} lg={3} className="g-4">
                   {items.map((item) => <Col key={item._id}><FoundItemEdit item={item} /></Col>)}

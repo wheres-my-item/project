@@ -15,7 +15,7 @@ const FoundItemEdit = ({ item }) => (
     <Card.Body>
       <Card.Text>{item.description}</Card.Text>
       <div className="d-grid gap-2">
-        <Button variant="outline-success">Edit</Button>{' '}
+        <Button id="unclaimed-items-edit-button" variant="outline-success">Edit</Button>{' '}
       </div>
     </Card.Body>
   </Card>

@@ -34,7 +34,7 @@ const FoundItemWithClaims = ({ item }) => (
         </Card.Text>
       </div>
       <div className="d-grid gap-2">
-        <Button variant="outline-success">Edit</Button>{' '}
+        <Button id="claimed-items-edit-button" variant="outline-success">Edit</Button>{' '}
       </div>
     </Card.Body>
   </Card>
