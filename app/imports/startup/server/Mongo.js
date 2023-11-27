@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Stuffs } from '../../api/stuff/Stuff.js';
 import { Items } from '../../api/items/Items';
-
+import { Claims } from '../../api/claims/Claims';
 /* eslint-disable no-console */
 
 // Initialize the database with a default data document.
@@ -20,12 +20,27 @@ if (Stuffs.collection.find().count() === 0) {
 
 const addItems = (item) => {
   console.log(`  Adding: ${item.name} (${item.category})`);
-  Items.collection.insert(item);
+  return Items.collection.insert(item); // Return the inserted item ID
 };
+
+// Array to store item IDs
+let itemIds = [];
 
 if (Items.collection.find().count() === 0) {
   if (Meteor.settings.defaultItems) {
     console.log('Creating default items.');
-    Meteor.settings.defaultItems.forEach(item => addItems(item));
+    itemIds = Meteor.settings.defaultItems.map(item => addItems(item));
+  }
+}
+
+const addClaims = (claim, index) => {
+  console.log(`  Adding claim for item ID: ${itemIds[index % itemIds.length]} (${claim.firstName})`);
+  Claims.collection.insert({ ...claim, itemId: itemIds[index % itemIds.length] });
+};
+
+if (Claims.collection.find().count() === 0) {
+  if (Meteor.settings.defaultClaims) {
+    console.log('Creating default claims.');
+    Meteor.settings.defaultClaims.forEach((claim, index) => addClaims(claim, index));
   }
 }

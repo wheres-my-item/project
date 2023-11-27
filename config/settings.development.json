@@ -13,9 +13,9 @@
 
   "defaultItems": [
     {
-    "name": "Backpack", "category": "Bags and Backpacks", "color": "Black", "datePosted": "2023-09-01",
-    "image": "https://images.journeys.com/images/products/1_623492_ZM.JPG",
-    "description": "Black backpack with a laptop inside."
+      "name": "Backpack", "category": "Bags and Backpacks", "color": "Black", "datePosted": "2023-09-01",
+      "image": "https://images.journeys.com/images/products/1_623492_ZM.JPG",
+      "description": "Black backpack with a laptop inside."
     },
     {
       "name": "Laptop", "category": "Electronics", "color": "Silver", "datePosted": "2023-10-10",
@@ -26,6 +26,12 @@
       "name": "Water Bottle", "category": "Personal Items", "color": "Blue", "datePosted": "2023-10-10",
       "image": "https://www.pcrichard.com/dw/image/v2/BFXM_PRD/on/demandware.static/-/Sites-pcrichard-master-product-catalog/default/dwf7580d25/images/hires/AZ2_YRAMBC36NB.jpg?sw=800&sh=800&sm=fit",
       "description": "Blue Yeti bottle with a sticker on it."
+    }
+  ],
+
+  "defaultClaims": [
+    {
+      "firstName": "John", "lastName": "Doe", "email": "johndoe@hawaii.edu", "phone": "808-123-4567", "location": "Kuykendall 101", "time": "Tuesday 10:00am", "features": "Black backpack with a laptop inside.", "image": "https://images.journeys.com/images/products/1_623492_ZM.JPG", "comments": "I lost my backpack in Kuykendall 101 on Tuesday at 10:00am. I have the password to unlock it."
     }
   ]
 }
