@@ -46,7 +46,7 @@ body .navbar {
 
 .accordion-header {
   --bs-accordion-active-bg: #668F80;
-  --bs-accordion-btn-bg: #848fa5;
+  --bs-accordion-btn-bg: #515151;
   --bs-accordion-active-color: #ffffff;
   --bs-accordion-btn-color: #ffffff;
 }
