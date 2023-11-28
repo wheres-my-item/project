@@ -4,7 +4,7 @@
   --matr-navbar-bg: black;
   --matr-navbar-bg-rgb: 13, 13, 13;
   --matr-navbar-text-color: white;
-  --matr-navbar-highlight-text: khaki;
+  --matr-navbar-highlight-text: #668f80;
 }
 
 body {
@@ -49,4 +49,21 @@ body .navbar {
   --bs-accordion-btn-bg: #515151;
   --bs-accordion-active-color: #ffffff;
   --bs-accordion-btn-color: #ffffff;
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--matr-navbar-highlight-text) !important;
+  --bs-btn-border-color: var(--matr-navbar-highlight-text) !important;
+  --bs-btn-hover-bg: #668f80 !important;
+  --bs-btn-hover-border-color: #668f80 !important;
+  --bs-btn-active-bg: #198754 !important;
+  --bs-btn-active-border-color: #198754 !important;
+}
+
+.dropdown-item.active {
+  background-color: #668f80 !important;
+}
+
+.dropdown-menu {
+  --bs-dropdown-link-active-bg: #668f80 !important;
 }
