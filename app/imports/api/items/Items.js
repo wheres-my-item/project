@@ -23,7 +23,7 @@ class ItemsCollection {
         allowedValues: ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'Pink', 'Brown', 'White', 'Black', 'Gray', 'Silver', 'Gold', 'Other'],
         defaultValue: 'other',
       },
-      datePosted: Date('YYYY-MM-DD'),
+      datePosted: String,
       image: String,
       description: String,
     });
