@@ -1,6 +1,35 @@
 import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { Stuffs } from '../../api/stuff/Stuff';
+import { Items } from '../../api/items/Items';
+import { Claims } from '../../api/claims/Claims';
+
+// User-level publication.
+// Publish all documents from all users.
+Meteor.publish(Items.userPublicationName, function () {
+  if (this.userId) {
+    return Items.collection.find();
+  }
+  return this.ready();
+});
+
+// Admin-level publication.
+// Publish all documents from all users.
+Meteor.publish(Items.adminPublicationName, function () {
+  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
+    return Items.collection.find();
+  }
+  return this.ready();
+});
+
+// Admin-level publication
+// Publish all claims from all users.
+Meteor.publish(Claims.adminPublicationName, function () {
+  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
+    return Claims.collection.find();
+  }
+  return this.ready();
+});
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise, publish nothing.
