@@ -18,7 +18,7 @@ import { landingPage } from './landing.page';
 // const claimItemTest = { firstname: 'Jane', lastname: 'Doe', email: 'email@gmail.com', phone: '(123)456-7890', locationlost: 'Library', datelost: 'October 31, 2023', features: 'Dog Sticker', comments: 'None' };
 // const addItemTest = { name: 'Jane Doe', color: 'Red', location: 'Library', description: 'Lost' };
 
-fixture('meteor-application-template-react localhost test with default db')
+fixture('wheres-my-item localhost test with default db')
   .page('http://localhost:3000');
 //
 test('Test that landing page shows up', async (testController) => {
