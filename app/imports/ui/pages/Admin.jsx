@@ -21,6 +21,12 @@ const Admin = () => {
       ready: rdy,
     };
   }, []);
+
+  const itemHasClaims = (item) => item.claims && item.claims.length > 0;
+
+  const itemsWithClaims = items.filter(item => itemHasClaims(item));
+  const itemsWithoutClaims = items.filter(item => !itemHasClaims(item));
+
   return (ready ? (
     <Container id="admin-page" className="py-3">
       <Row className="justify-content-center">
@@ -34,7 +40,7 @@ const Admin = () => {
               <Accordion.Header id="claimed-items-button"><h5>Claimed Items</h5></Accordion.Header>
               <Accordion.Body>
                 <Row sm={1} md={2} lg={3} className="g-4">
-                  {items.map((item) => <Col key={item._id}><FoundItemWithClaims item={item} /></Col>)}
+                  {itemsWithClaims.map((item) => <Col key={item._id}><FoundItemWithClaims item={item} /></Col>)}
                 </Row>
               </Accordion.Body>
             </Accordion.Item>
@@ -42,7 +48,7 @@ const Admin = () => {
               <Accordion.Header id="unclaimed-items-button"><h5>Unclaimed Items</h5></Accordion.Header>
               <Accordion.Body>
                 <Row sm={1} md={2} lg={3} className="g-4">
-                  {items.map((item) => <Col key={item._id}><FoundItemEdit item={item} /></Col>)}
+                  {itemsWithoutClaims.map((item) => <Col key={item._id}><FoundItemEdit item={item} /></Col>)}
                 </Row>
               </Accordion.Body>
             </Accordion.Item>
