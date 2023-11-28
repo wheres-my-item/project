@@ -26,7 +26,7 @@ const Landing = () => (
             <Card className="h-100 align-items-center justify-content-center">
               <Card.Title>
                 <p />
-                <strong>Lost Something?</strong>
+                <strong>Find what you&apos;re looking for!</strong>
               </Card.Title>
               <Card.Body>
                 <Card.Text>
