@@ -65,7 +65,7 @@ test('Test that the "Admin" page works', async (testController) => {
   await navBar.gotoAdminPage(testController);
   await adminPage.isDisplayed(testController);
   await adminPage.testAccordions(testController);
-  await adminPage.testClaimedItemsEditButton(testController);
+  await adminPage.testUnclaimedItemsEditButton(testController);
   // test edit page when finalized
 });
 
