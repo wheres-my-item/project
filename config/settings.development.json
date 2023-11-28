@@ -26,6 +26,56 @@
       "name": "Water Bottle", "category": "Personal Items", "color": "Blue", "datePosted": "2023-10-10",
       "image": "https://www.pcrichard.com/dw/image/v2/BFXM_PRD/on/demandware.static/-/Sites-pcrichard-master-product-catalog/default/dwf7580d25/images/hires/AZ2_YRAMBC36NB.jpg?sw=800&sh=800&sm=fit",
       "description": "Blue Yeti bottle with a sticker on it."
+    },
+    {
+      "name": "Key", "category": "Miscellaneous", "color": "Silver", "datePosted": "2023-10-19",
+      "image": "https://dormakaba.rokka.io/product-thumbnail/e7d49b/131220784272783018645_Bild_1-G-ZSL-AP2000-2.jpg",
+      "description": "Silver key."
+    },
+    {
+      "name": "Laptop", "category": "Electronics", "color": "Black", "datePosted": "2023-10-23",
+      "image": "https://3.bp.blogspot.com/-AXIB_cyIJ1A/T_ZiQcBHNgI/AAAAAAAAAJk/G3l1aHtAXYA/s1600/Dell+Inspiron+i17RN-2929BK+17-Inch+Laptop+(Diamond+Black).jpg",
+      "description": "Black Dell laptop."
+    },
+    {
+      "name": "Notebook", "category": "Miscellaneous", "color": "Purple", "datePosted": "2023-10-27",
+      "image": "https://5.imimg.com/data5/CJ/TR/AN/SELLER-63752132/spiral-notebook.jpg",
+      "description": "Purple notebook."
+    },
+    {
+      "name": "Water Bottle", "category": "Miscellaneous", "color": "Silver", "datePosted": "2023-11-03",
+      "image": "https://www.everich.com/wp-content/uploads/2020/09/double-wall-stainless-steel-water-bottle-1.jpg",
+      "description": "Stainless water bottle."
+    },
+    {
+      "name": "Steam Deck", "category": "Electronics", "color": "Black", "datePosted": "2023-11-08",
+      "image": "https://www.tccq.com/image/cache/catalog/0201003/Steam-Deck-Console-512GB-in-Qatar-1200x1200.jpg",
+      "description": "Steam Deck with a slight scratch on the backside."
+    },
+    {
+      "name": "iPhone", "category": "Electronics", "color": "Silver", "datePosted": "2023-11-12",
+      "image": "https://fdn.gsmarena.com/imgroot/news/18/09/iphone-se-discontinued/-728/gsmarena_001.jpg",
+      "description": "Silver iPhone X."
+    },
+    {
+      "name": "Computer Mouse", "category": "Electronics", "color": "Blue", "datePosted": "2023-11-15",
+      "image": "https://i5.walmartimages.com/asr/ba811093-851b-45da-ab4b-e62dd92c8e94.2cdab44bac1495e150c622bb56e6d490.jpeg",
+      "description": "Blue computer mouse."
+    },
+    {
+      "name": "Lab Coats", "category": "Clothing", "color": "White", "datePosted": "2023-11-18",
+      "image": "https://www.perthscientific.com.au/wp-content/uploads/2021/08/LILABCTM7-1.jpg",
+      "description": "White lab coats."
+    },
+    {
+      "name": "Wallet", "category": "Miscellaneous", "color": "Brown", "datePosted": "2023-11-19",
+      "image": "https://metropolitangirls.com/wp-content/uploads/2017/04/tommy-hillfiger-leather-wallet.jpg",
+      "description": "Brown wallet."
+    },
+    {
+      "name": "Water Bottle", "category": "Miscellaneous", "color": "Green", "datePosted": "2023-11-21",
+      "image": "https://static.wixstatic.com/media/a8f5bb_f585bf68ae5e4cefa8837aa4c713fb36~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+      "description": "Green water bottle."
     }
   ],
 
