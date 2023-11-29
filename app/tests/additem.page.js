@@ -17,7 +17,6 @@ class AddItemPage {
     await testController.typeText('#description-form', description);
     await testController.click('#category-form');
     await testController.click('#color-form');
-    await testController.click('#brown');
     await testController.click('#submit-button');
   }
 }
