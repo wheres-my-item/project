@@ -59,7 +59,7 @@ const ClaimItem = () => {
           <Row>
             <Form.Group as={Col} md="6" className="mb-3">
               <Form.Label>First Name</Form.Label>
-              <Form.Control id="#first-name-form" value={formData.firstName} onChange={handleChange} placeholder="" />
+              <Form.Control id="first-name-form" value={formData.firstName} onChange={handleChange} placeholder="" />
             </Form.Group>
             <Form.Group as={Col} md="6" className="mb-3">
               <Form.Label>Last Name</Form.Label>
