@@ -46,19 +46,19 @@ const AddItem = () => {
   const formattedDate = currentDate.toLocaleDateString('en-CA', { year: 'numeric', month: '2-digit', day: '2-digit' });
 
   return (
-    <Container className="py-3">
+    <Container id="add-item-page" className="py-3">
       <Row className="justify-content-center">
         <Col xs={5}>
           <Col className="text-center"><h2>Add Stuff</h2></Col>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)}>
             <Card>
               <Card.Body>
-                <TextField name="name" />
-                <SelectField name="category" />
-                <SelectField name="color" />
-                <TextField name="description" />
-                <TextField name="image" />
-                <SubmitField value="Submit" />
+                <TextField id="name-form" name="name" />
+                <SelectField id="category-form" name="category" />
+                <SelectField id="color-form" name="color" />
+                <TextField id="description-form" name="description" />
+                <TextField id="image-form" name="image" />
+                <SubmitField id="submit-button" value="Submit" />
                 <ErrorsField />
                 <HiddenField name="datePosted" value={formattedDate} />
               </Card.Body>

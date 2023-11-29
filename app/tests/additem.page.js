@@ -11,13 +11,13 @@ class AddItemPage {
     await testController.expect(this.pageSelector.exists).ok();
   }
 
-  async addItemForm(testController, name, color, location, description) {
+  async addItemForm(testController, name, image, description) {
     await testController.typeText('#name-form', name);
-    await testController.click('#category-button');
-    await testController.click('#clothing-option');
-    await testController.typeText('#color-form', color);
-    await testController.typeText('#location-form', location);
+    await testController.typeText('#image-form', image);
     await testController.typeText('#description-form', description);
+    await testController.click('#category-form');
+    await testController.click('#color-form');
+    await testController.click('#brown');
     await testController.click('#submit-button');
   }
 }

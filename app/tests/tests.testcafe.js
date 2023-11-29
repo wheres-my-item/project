@@ -16,7 +16,7 @@ const credentials = { username: 'john@foo.com', password: 'changeme' };
 const adminCredentials = { username: 'admin@foo.com', password: 'changeme' };
 const registerCredentials = { username: 'register@foo.com', password: 'changeme' };
 const claimItemTest = { firstname: 'Jane', lastname: 'Doe', email: 'email@gmail.com', phone: '(123)456-7890', locationlost: 'Library', datelost: 'October 31, 2023', features: 'Dog Sticker', comments: 'None' };
-const addItemTest = { name: 'Jane Doe', color: 'Red', location: 'Library', description: 'Lost' };
+const addItemTest = { name: 'Jane Doe', image: 'None', description: 'Lost' };
 
 fixture('wheres-my-item localhost test with default db')
   .page('http://localhost:3000');
@@ -75,7 +75,7 @@ test('Test that the "Add Item" page works', async (testController) => {
   await navBar.gotoAdminPage(testController);
   await adminPage.gotoAddItemPage(testController);
   await addItemPage.isDisplayed(testController);
-  await addItemPage.addItemForm(testController, addItemTest.name, addItemTest.color, addItemTest.location, addItemTest.description);
+  await addItemPage.addItemForm(testController, addItemTest.name, addItemTest.image, addItemTest.description);
   // test upload image when finalized
 });
 
