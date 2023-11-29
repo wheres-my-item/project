@@ -22,9 +22,11 @@ class AdminPage {
     await testController.click('#claimed-items-button');
   }
 
+  /*
   async testClaimedItemsEditButton(testController) {
     await testController.click('#claimed-items-edit-button');
   }
+   */
 
   async testUnclaimedItemsEditButton(testController) {
     await testController.click('#unclaimed-items-edit-button');
