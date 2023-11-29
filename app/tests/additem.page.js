@@ -13,7 +13,7 @@ class AddItemPage {
 
   async addItemForm(testController, name, image, description) {
     await testController.typeText('#name-form', name);
-    await testController.typeText('#image-form', image);
+    // await testController.typeText('#image-form', image);
     await testController.typeText('#description-form', description);
     await testController.click('#category-form');
     await testController.click('#color-form');
