@@ -17,9 +17,23 @@ const ClaimItem = () => {
 
   const [message, setMessage] = useState('');
 
+  const idToStateKeyMap = {
+    'first-name-form': 'firstName',
+    'last-name-form': 'lastName',
+    'email-form': 'email',
+    'phone-form': 'phone',
+    'location-lost-form': 'location',
+    'date-lost-form': 'time',
+    'features-form': 'features',
+    'comments-form': 'comments',
+  };
+
   const handleChange = (e) => {
     const { id, value } = e.target;
-    setFormData(prevState => ({ ...prevState, [id]: value }));
+    const stateKey = idToStateKeyMap[id];
+    if (stateKey) {
+      setFormData(prevState => ({ ...prevState, [stateKey]: value }));
+    }
   };
 
   const handleSubmit = (e) => {

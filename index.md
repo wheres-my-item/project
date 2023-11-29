@@ -5,7 +5,7 @@ meteor-application-template-react is a sample Meteor 2.9 application that illust
   * A standard directory layout using 'imports/' as recommended in the [Meteor Guide](https://guide.meteor.com/structure.html)
   * [Bootstrap 5 React](https://react-bootstrap.github.io/) for user interface.
   * [Uniforms](https://uniforms.tools/) for form development.
-  * [alanning:roles](https://github.com/alanning/meteor-roles) to implement a special "Admin" user.
+  * [alanning:roles](https://github.com/alanning/meteor-roles) to implement a special "AdminClaim" user.
   * Authorization, authentication, and registration using built-in Meteor packages.
   * Initialization of users and data from a settings file.
   * Alerts regarding success or failure of DB updates using [Sweet Alert](https://sweetalert.js.org/).
@@ -166,7 +166,7 @@ Alternatively, clicking on the Login link, then on the Sign Up menu item display
 ![](https://github.com/ics-software-engineering/meteor-application-template-react/raw/main/doc/register-page.png)
 
 
-#### Landing (after Login) page, non-Admin user
+#### Landing (after Login) page, non-AdminClaim user
 
 Once you log in (either to an existing account or by creating a new one), the navbar changes as follows:
 
@@ -194,15 +194,15 @@ After clicking on the "Edit" link associated with an item, this page displays th
 
 ![](https://github.com/ics-software-engineering/meteor-application-template-react/raw/main/doc/edit-stuff-page.png)
 
-#### Landing (after Login), Admin user
+#### Landing (after Login), AdminClaim user
 
 You can define an "admin" user in the settings.json file. This user, after logging in, gets a special entry in the navbar:
 
 ![](https://github.com/ics-software-engineering/meteor-application-template-react/raw/main/doc/admin-landing-page.png)
 
-#### Admin page (list all users stuff)
+#### AdminClaim page (list all users stuff)
 
-To provide a simple example of a "super power" for Admin users, the Admin page lists all of the Stuff by all of the users:
+To provide a simple example of a "super power" for AdminClaim users, the AdminClaim page lists all of the Stuff by all of the users:
 
 ![](https://github.com/ics-software-engineering/meteor-application-template-react/raw/main/doc/admin-list-stuff-page.png)
 
