@@ -11,15 +11,15 @@ class ClaimItemPage {
     await testController.expect(this.pageSelector.exists).ok();
   }
 
-  async claimItemForm(testController, firstname, lastname, email, phone, locationlost, datelost, features, comments) {
-    await testController.typeText('#firstName', firstname);
-    await testController.typeText('#lastName', lastname);
-    await testController.typeText('#email', email);
-    await testController.typeText('#phone', phone);
-    await testController.typeText('#location', locationlost);
-    await testController.typeText('#time', datelost);
-    await testController.typeText('#features', features);
-    await testController.typeText('#comments', comments);
+  async claimItemForm(testController, firstName, lastName, email, phone, location, time, features, comments) {
+    await testController.typeText('#first-name-form', firstName);
+    await testController.typeText('#last-name-form', lastName);
+    await testController.typeText('#email-form', email);
+    await testController.typeText('#phone-form', phone);
+    await testController.typeText('#location-lost-form', location);
+    await testController.typeText('#date-lost-form', time);
+    await testController.typeText('#features-form', features);
+    await testController.typeText('#comments-form', comments);
     await testController.click('#submit-button');
   }
 }
