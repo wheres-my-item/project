@@ -6,13 +6,11 @@ class ClaimsCollection {
   constructor() {
     this.name = 'ClaimsCollection';
     this.collection = new Mongo.Collection(this.name);
-
-    // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
       itemId: {
         type: String,
         label: 'Item ID',
-        // Custom validation to ensure the itemId exists in the Item collection
+        // ensure the itemId exists in the Item collection
         custom() {
           if (!Items.collection.findOne({ _id: this.value })) {
             return 'invalidItemId';
@@ -31,8 +29,6 @@ class ClaimsCollection {
       image: String,
       comments: String,
     });
-
-    this.collection.attachSchema(this.schema);
     this.userPublicationName = `${this.name}.publication.user`;
     this.adminPublicationName = `${this.name}.publication.admin`;
   }
