@@ -1,9 +1,6 @@
 import React from 'react';
 import { Col, Container, Row, Image } from 'react-bootstrap';
 import Accordion from 'react-bootstrap/Accordion';
-// import { AutoForm, ErrorsField, HiddenField, NumField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
-// import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
-// import { Stuffs } from '../../api/stuff/Stuff';
 
 /* Renders the EditStuff page for editing a single document. */
 const UserPage = () => (
@@ -13,21 +10,23 @@ const UserPage = () => (
         <Image rounded src="https://www.mithilahotel.com/gallery-images/properties/6/9/4/1580542728_LOST-FOUND-mobile_2.jpg" width={320} />
         <Row>
           <p><br /></p>
-          <h4>UH Manoa Lost Item Office</h4>
-          <p className="fw-bold">
+          <h4>UH Manoa Lost Item Office Information</h4>
+          <h5>
             Contact Us:
-          </p>
+          </h5>
           <p>
-            Phone: 808-xxx-xxxx <br />
-            Location: [placeholder]
+            <strong>Phone: </strong> 808-956-9567 <br />
+            <strong>Office Location:</strong> Kuykendall Hall, University of Hawaii at Manoa
+            <br />
+            <strong>Address: </strong> 2517-2523 Correa Rd, Honolulu, HI 96822
           </p>
-          <p className="fw-bold">
+          <h5>
             Office Hours:
-          </p>
+          </h5>
           <p>
-            Monday - Friday: 9:00 AM - 5:00 PM
-            Saturday: 10:00 AM - 2:00 PM
-            Sunday: Closed
+            <strong>Monday - Friday:</strong> 9:00 AM - 5:00 PM<br />
+            <strong>Saturday:</strong> 10:00 AM - 2:00 PM<br />
+            <strong>Sunday:</strong> Closed<br />
             (Note: Hours may vary during holidays and campus events.)
           </p>
 
@@ -44,21 +43,21 @@ const UserPage = () => (
             <Accordion.Header>Reporting Lost Items</Accordion.Header>
             <Accordion.Body>
               {/* eslint-disable-next-line max-len */}
-              <p>If you&apos;ve lost an item on campus, the UH Manoa Lost Item Office is here to assist you. Please contact us at 808-xxx-xxxx to report your lost item. Provide a detailed description of the item, the date and location it was last seen, and any other relevant information. We maintain a comprehensive database of found items and will do our utmost to reunite you with your belongings.</p>
+              <p>If you&apos;ve lost an item on campus, the UH Manoa Lost Item Office is here to assist you. Please contact us at 808-956-9567 to report your lost item. Provide a detailed description of the item, the date and location it was last seen, and any other relevant information. We maintain a comprehensive database of found items and will do our utmost to reunite you with your belongings.</p>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
             <Accordion.Header>Turning in Found Items</Accordion.Header>
             <Accordion.Body>
               {/* eslint-disable-next-line max-len */}
-              <p>Found something that doesn&apos;t belong to you? Your integrity in turning in found items helps keep our community honest and supportive. Bring the item to our office located at [placeholder], or contact us at 808-xxx-xxxx for further instructions. Your action can make a significant difference to someone who&apos;s lost something important.</p>
+              <p>Found something that doesn&apos;t belong to you? Your integrity in turning in found items helps keep our community honest and supportive. Bring the item to our office located at Kuykendall Hall, or contact us at 808-956-9567 for further instructions. Your action can make a significant difference to someone who&apos;s lost something important.</p>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="2">
             <Accordion.Header>Claiming Recovered Items</Accordion.Header>
             <Accordion.Body>
               {/* eslint-disable-next-line max-len */}
-              <p>Have you been notified that we&apos;ve found your item? Claiming it is easy. Visit our office at [placeholder] with a valid ID and a description of the item. We&apos;ll verify your ownership and happily reunite you with your lost belonging.</p>
+              <p>Have you been notified that we&apos;ve found your item? Claiming it is easy. Visit our office at Kuykendall Hall with a valid ID and a description of the item. We&apos;ll verify your ownership and happily reunite you with your lost belonging.</p>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3">
