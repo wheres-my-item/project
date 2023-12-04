@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Stuffs } from '../../api/stuff/Stuff.js';
 import { Items } from '../../api/items/Items';
-import { Claims } from '../../api/claims/Claims';
+// import { Claims } from '../../api/claims/Claims';
 /* eslint-disable no-console */
 
 // Initialize the database with a default data document.
