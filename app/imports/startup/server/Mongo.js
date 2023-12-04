@@ -29,18 +29,7 @@ let itemIds = [];
 if (Items.collection.find().count() === 0) {
   if (Meteor.settings.defaultItems) {
     console.log('Creating default items.');
+    // eslint-disable-next-line no-unused-vars
     itemIds = Meteor.settings.defaultItems.map(item => addItems(item));
-  }
-}
-
-const addClaims = (claim, index) => {
-  console.log(`  Adding claim for item ID: ${itemIds[index % itemIds.length]} (${claim.firstName})`);
-  Claims.collection.insert({ ...claim, itemId: itemIds[index % itemIds.length] });
-};
-
-if (Claims.collection.find().count() === 0) {
-  if (Meteor.settings.defaultClaims) {
-    console.log('Creating default claims.');
-    Meteor.settings.defaultClaims.forEach((claim, index) => addClaims(claim, index));
   }
 }

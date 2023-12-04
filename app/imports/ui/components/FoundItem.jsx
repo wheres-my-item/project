@@ -16,7 +16,8 @@ const FoundItem = ({ item }) => (
     <Card.Body>
       <Card.Text>{item.description}</Card.Text>
       <div className="d-grid gap-2">
-        <Link to="/claim">
+        {/* eslint-disable-next-line react/prop-types */}
+        <Link to={`/claim/${item._id}`}>
           <Button id="claim-button" variant="outline-success">Claim This Item</Button>{' '}
         </Link>
       </div>
