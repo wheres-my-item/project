@@ -22,11 +22,12 @@ Meteor.publish(Items.adminPublicationName, function () {
   return this.ready();
 });
 
-// Admin-level publication
-// Publish all claims from all users.
-Meteor.publish(Claims.adminPublicationName, function () {
+// Admin-level publication.
+// Publish all claims for requested item.
+// eslint-disable-next-line meteor/audit-argument-checks
+Meteor.publish(Claims.adminPublicationName, function publish(itemId) {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
-    return Claims.collection.find();
+    return Claims.collection.find({ itemId });
   }
   return this.ready();
 });
