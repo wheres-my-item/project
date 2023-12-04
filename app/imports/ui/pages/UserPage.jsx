@@ -15,7 +15,7 @@ const UserPage = () => (
             Contact Us:
           </h5>
           <p>
-            <strong>Phone: </strong> 808-956-9567 <br />
+            <strong>Phone: </strong> 808-123-4567 <br />
             <strong>Office Location:</strong> Kuykendall Hall, University of Hawaii at Manoa
             <br />
             <strong>Address: </strong> 2517-2523 Correa Rd, Honolulu, HI 96822
@@ -43,14 +43,14 @@ const UserPage = () => (
             <Accordion.Header>Reporting Lost Items</Accordion.Header>
             <Accordion.Body>
               {/* eslint-disable-next-line max-len */}
-              <p>If you&apos;ve lost an item on campus, the UH Manoa Lost Item Office is here to assist you. Please contact us at 808-956-9567 to report your lost item. Provide a detailed description of the item, the date and location it was last seen, and any other relevant information. We maintain a comprehensive database of found items and will do our utmost to reunite you with your belongings.</p>
+              <p>If you&apos;ve lost an item on campus, the UH Manoa Lost Item Office is here to assist you. Please contact us at 808-123-4567 to report your lost item. Provide a detailed description of the item, the date and location it was last seen, and any other relevant information. We maintain a comprehensive database of found items and will do our utmost to reunite you with your belongings.</p>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
             <Accordion.Header>Turning in Found Items</Accordion.Header>
             <Accordion.Body>
               {/* eslint-disable-next-line max-len */}
-              <p>Found something that doesn&apos;t belong to you? Your integrity in turning in found items helps keep our community honest and supportive. Bring the item to our office located at Kuykendall Hall, or contact us at 808-956-9567 for further instructions. Your action can make a significant difference to someone who&apos;s lost something important.</p>
+              <p>Found something that doesn&apos;t belong to you? Your integrity in turning in found items helps keep our community honest and supportive. Bring the item to our office located at Kuykendall Hall, or contact us at 808-123-4567 for further instructions. Your action can make a significant difference to someone who&apos;s lost something important.</p>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="2">
