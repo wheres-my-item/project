@@ -1,54 +1,73 @@
 import React from 'react';
-import { Button, Col, Container, Form, Image, Row } from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
+import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
+import SimpleSchema from 'simpl-schema';
+import swal from 'sweetalert';
+import { AutoForm, ErrorsField, HiddenField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
+import { Items } from '../../api/items/Items';
 
-const AddItem = () => (
-  <Container id="add-item-page" className="py-3">
-    <Row className="justify-content-center">
-      <Row className="page-title-row align-items-center">
-        <Col className="text-start"><h2>Add Lost Item</h2></Col>
-      </Row>
-      <Row>
-        <Col>
-          <Image src="/images/placeholder-image.jpeg" fluid alt="item image" />
+const formSchema = new SimpleSchema({
+  name: String,
+  category: {
+    type: String,
+    allowedValues: ['Clothing', 'Electronics', 'Personal Items', 'Bags and Backpacks', 'Books and Notebooks', 'IDs and Cards', 'Miscellaneous'],
+    defaultValue: 'Miscellaneous',
+  },
+  color: {
+    type: String,
+    allowedValues: ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple', 'Pink', 'Brown', 'White', 'Black', 'Gray', 'Silver', 'Gold', 'Other'],
+    defaultValue: 'Other',
+  },
+  datePosted: String,
+  image: String,
+  description: String,
+});
+
+const bridge = new SimpleSchema2Bridge(formSchema);
+const AddItem = () => {
+  const submit = (data, formRef) => {
+    const { name, category, color, datePosted, image, description } = data;
+    Items.collection.insert(
+      { name, category, color, datePosted, image, description },
+      (error) => {
+        if (error) {
+          swal('Error', error.message, 'error');
+        } else {
+          swal('Success', 'Item added successfully', 'success');
+          formRef.reset();
+        }
+      },
+    );
+  };
+
+  let fRef = null;
+
+  const currentDate = new Date();
+  const formattedDate = currentDate.toLocaleDateString('en-CA', { year: 'numeric', month: '2-digit', day: '2-digit' });
+
+  return (
+    <Container id="add-item-page" className="py-3">
+      <Row className="justify-content-center">
+        <Col xs={5}>
+          <Col className="text-center"><h2>Add Stuff</h2></Col>
+          <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => submit(data, fRef)}>
+            <Card>
+              <Card.Body>
+                <TextField id="name-form" name="name" />
+                <SelectField id="category-form" name="category" />
+                <SelectField id="color-form" name="color" />
+                <TextField id="description-form" name="description" />
+                <TextField id="image-form" name="image" />
+                <SubmitField id="submit-button" value="Submit" />
+                <ErrorsField />
+                <HiddenField name="datePosted" value={formattedDate} />
+              </Card.Body>
+            </Card>
+          </AutoForm>
         </Col>
-        <Col className="text-start">
-          <Button variant="primary">Upload Image</Button>
-        </Col>
       </Row>
-      <Row>
-        <Form>
-          <Form.Group className="mb-3">
-            <Form.Label>Name</Form.Label>
-            <Form.Control id="name-form" placeholder="Enter Item Name" />
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Category</Form.Label>
-            <Form.Select id="category-button">
-              <option>Bag</option>
-              <option id="clothing-option">Clothing</option>
-              <option>Electronics</option>
-              <option>Miscellaneous</option>
-            </Form.Select>
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Color</Form.Label>
-            <Form.Control id="color-form" placeholder="Enter Color" />
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Location</Form.Label>
-            <Form.Control id="location-form" placeholder="Enter Location Found" />
-          </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Description</Form.Label>
-            <Form.Control id="description-form" placeholder="Enter Item Description" />
-          </Form.Group>
-          <Button id="submit-button" variant="success" type="submit">
-            Submit
-          </Button>
-        </Form>
-      </Row>
-    </Row>
-  </Container>
-);
+    </Container>
+  );
+};
 
 export default AddItem;

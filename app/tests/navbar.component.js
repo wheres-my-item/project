@@ -52,10 +52,6 @@ class NavBar {
     await testController.click('#list-item-nav');
   }
 
-  async gotoClaimItemPage(testController) {
-    await testController.click('#claim-item-nav');
-  }
-
   async gotoAdminPage(testController) {
     await testController.click('#list-stuff-admin-nav');
   }
