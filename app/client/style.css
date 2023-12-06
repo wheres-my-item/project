@@ -53,6 +53,23 @@ body .navbar {
   --bs-accordion-btn-color: #ffffff;
 }
 
+
+#signin-form-email, #signin-form-password {
+  margin-top: 10px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+* {
+  box-sizing: border-box;
+}
+
+h3, .sign-in {
+  font-weight: bolder;
+  font-family: 'Fira Sans', sans-serif;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
 .btn-primary {
   --bs-btn-bg: #198754 !important;
   --bs-btn-border-color: #198754 !important;

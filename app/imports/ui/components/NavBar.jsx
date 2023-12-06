@@ -4,7 +4,8 @@ import { useTracker } from 'meteor/react-meteor-data';
 import { NavLink } from 'react-router-dom';
 import { Roles } from 'meteor/alanning:roles';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { BoxArrowRight, PersonFill, PersonPlusFill, Search } from 'react-bootstrap-icons';
+import { BoxArrowRight } from 'react-bootstrap-icons';
+
 
 const NavBar = () => {
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
@@ -31,20 +32,11 @@ const NavBar = () => {
             ) : ''}
           </Nav>
           <Nav className="justify-content-end">
-            {currentUser === '' ? (
-              <NavDropdown id="login-dropdown" title="Login">
-                <NavDropdown.Item id="login-dropdown-sign-in" as={NavLink} to="/signin">
-                  <PersonFill />
-                  Sign
-                  in
-                </NavDropdown.Item>
-                <NavDropdown.Item id="login-dropdown-sign-up" as={NavLink} to="/signup">
-                  <PersonPlusFill />
-                  Sign
-                  up
-                </NavDropdown.Item>
-              </NavDropdown>
-            ) : (
+            {currentUser === '' ? ([
+              <button type="button" href="#signin" className="btn btn-outline-secondary btn-sm fw-bolder" onClick={() => { window.location.href = '/signin'; }}>
+                <Nav.Link id="userpage-nav" as={NavLink} to="/signin" key="userpage" className="mx-3">Sign In</Nav.Link>
+              </button>,
+            ]) : (
               <NavDropdown id="navbar-current-user" title={currentUser}>
                 <NavDropdown.Item id="navbar-sign-out" as={NavLink} to="/signout">
                   <BoxArrowRight />
