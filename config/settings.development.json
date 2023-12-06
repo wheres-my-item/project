@@ -9,5 +9,229 @@
     { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
     { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+  ],
+
+  "defaultItems": [
+    {
+      "name": "Backpack", "category": "Bags and Backpacks", "color": "Black", "datePosted": "2023-8-2",
+      "image": "https://images.journeys.com/images/products/1_623492_ZM.JPG",
+      "description": "Black backpack with a laptop inside."
+    },
+    {
+      "name": "Laptop", "category": "Electronics", "color": "Silver", "datePosted": "2023-8-4",
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/refurb-mbp14-silver-m1-2021_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1638575198000",
+      "description": "Silver macbook pro."
+    },
+    {
+      "name": "Water Bottle", "category": "Personal Items", "color": "Blue", "datePosted": "2023-8-7",
+      "image": "https://www.pcrichard.com/dw/image/v2/BFXM_PRD/on/demandware.static/-/Sites-pcrichard-master-product-catalog/default/dwf7580d25/images/hires/AZ2_YRAMBC36NB.jpg?sw=800&sh=800&sm=fit",
+      "description": "Blue Yeti bottle with a sticker on it."
+    },
+    {
+      "name": "Key", "category": "Miscellaneous", "color": "Silver", "datePosted": "2023-8-9",
+      "image": "https://dormakaba.rokka.io/product-thumbnail/e7d49b/131220784272783018645_Bild_1-G-ZSL-AP2000-2.jpg",
+      "description": "Silver key."
+    },
+    {
+      "name": "Laptop", "category": "Electronics", "color": "Black", "datePosted": "2023-8-11",
+      "image": "https://3.bp.blogspot.com/-AXIB_cyIJ1A/T_ZiQcBHNgI/AAAAAAAAAJk/G3l1aHtAXYA/s1600/Dell+Inspiron+i17RN-2929BK+17-Inch+Laptop+(Diamond+Black).jpg",
+      "description": "Black Dell laptop."
+    },
+    {
+      "name": "Notebook", "category": "Books and Notebooks", "color": "Purple", "datePosted": "2023-8-15",
+      "image": "https://5.imimg.com/data5/CJ/TR/AN/SELLER-63752132/spiral-notebook.jpg",
+      "description": "Purple notebook."
+    },
+    {
+      "name": "Water Bottle", "category": "Personal Items", "color": "Silver", "datePosted": "2023-8-20",
+      "image": "https://www.everich.com/wp-content/uploads/2020/09/double-wall-stainless-steel-water-bottle-1.jpg",
+      "description": "Stainless water bottle."
+    },
+    {
+      "name": "Steam Deck", "category": "Electronics", "color": "Black", "datePosted": "2023-8-24",
+      "image": "https://www.tccq.com/image/cache/catalog/0201003/Steam-Deck-Console-512GB-in-Qatar-1200x1200.jpg",
+      "description": "Steam Deck with a slight scratch on the backside."
+    },
+    {
+      "name": "iPhone", "category": "Electronics", "color": "Silver", "datePosted": "2023-8-29",
+      "image": "https://fdn.gsmarena.com/imgroot/news/18/09/iphone-se-discontinued/-728/gsmarena_001.jpg",
+      "description": "Silver iPhone X."
+    },
+    {
+      "name": "Computer Mouse", "category": "Electronics", "color": "Blue", "datePosted": "2023-9-2",
+      "image": "https://i5.walmartimages.com/asr/ba811093-851b-45da-ab4b-e62dd92c8e94.2cdab44bac1495e150c622bb56e6d490.jpeg",
+      "description": "Blue computer mouse."
+    },
+    {
+      "name": "Lab Coats", "category": "Clothing", "color": "White", "datePosted": "2023-9-4",
+      "image": "https://www.perthscientific.com.au/wp-content/uploads/2021/08/LILABCTM7-1.jpg",
+      "description": "White lab coats."
+    },
+    {
+      "name": "Wallet", "category": "Miscellaneous", "color": "Brown", "datePosted": "2023-9-7",
+      "image": "https://metropolitangirls.com/wp-content/uploads/2017/04/tommy-hillfiger-leather-wallet.jpg",
+      "description": "Brown wallet."
+    },
+    {
+      "name": "Water Bottle", "category": "Personal Items", "color": "Green", "datePosted": "2023-9-11",
+      "image": "https://static.wixstatic.com/media/a8f5bb_f585bf68ae5e4cefa8837aa4c713fb36~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+      "description": "Green water bottle."
+    },
+    {
+      "name": "Sunglasses", "category": "Personal Items", "color": "Black", "datePosted": "2023-9-16",
+      "image": "https://cdn.shopify.com/s/files/1/0719/6939/products/A856-02a_800x.jpg?v=1557104455",
+      "description": "Black Ray-Ban sunglasses."
+    },
+    {
+      "name": "Headphones", "category": "Electronics", "color": "Red", "datePosted": "2023-9-20",
+      "image": "https://www.bhphotovideo.com/images/images500x500/beats_by_dr_dre_900_00109_01_studio_wireless_headphones_red_1389744073_1016369.jpg",
+      "description": "Red Beats headphones."
+    },
+    {
+      "name": "Umbrella", "category": "Miscellaneous", "color": "Blue", "datePosted": "2023-9-21",
+      "image": "https://distributor.golding.eu/rpet-folding-umbrella-navy--10914303$2--hd.jpg",
+      "description": "Blue folding umbrella."
+    },
+    {
+      "name": "T-Shirt", "category": "Clothing", "color": "Gray", "datePosted": "2023-9-24",
+      "image": "https://i.etsystatic.com/18901578/r/il/9f4370/3527169461/il_794xN.3527169461_tmus.jpg",
+      "description": "Gray cotton t-shirt."
+    },
+    {
+      "name": "Mechanical Pencil", "category": "Books and Notebooks", "color": "Silver", "datePosted": "2023-9-26",
+      "image": "https://i5.walmartimages.com/asr/01f06eb8-c2c9-4380-8dec-fc8f4c3384f0.0c53d27cbd8f469bd4bdcbaa5467cb78.jpeg",
+      "description": "Silver mechanical pencil, 0.9mm lead."
+    },
+    {
+      "name": "Camera", "category": "Electronics", "color": "Black", "datePosted": "2023-9-26",
+      "image": "https://www.bhphotovideo.com/images/images2500x2500/nikon_1532_d3300_dslr_camera_with_1023353.jpg",
+      "description": "Black Nikon DSLR camera."
+    },
+    {
+      "name": "Backpack", "category": "Bags and Backpacks", "color": "Green", "datePosted": "2023-9-27",
+      "image": "https://everestbags.com/media/ecom/prodxl/8045d-dgrnbk.jpg",
+      "description": "Green hiking backpack."
+    },
+    {
+      "name": "Sketchbook", "category": "Books and Notebooks", "color": "White", "datePosted": "2023-10-2",
+      "image": "https://i.pinimg.com/originals/6a/8d/d0/6a8dd0c8bea3b8c12ef1022f4cc4a651.jpg",
+      "description": "White sketchbook with pencil marks."
+    },
+    {
+      "name": "Credit Card", "category": "IDs and Cards", "color": "Gold", "datePosted": "2023-10-6",
+      "image": "https://moremoneymorechoices.com/wp-content/uploads/2020/08/amex-gold-card.jpg",
+      "description": "Gold American Express credit card."
+    },
+    {
+      "name": "Tablet", "category": "Electronics", "color": "Black", "datePosted": "2023-10-9",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51FaXV6pKbL._SL1000_.jpg",
+      "description": "Black Samsung Galaxy Tab."
+    },
+    {
+      "name": "Graphing Calculator", "category": "Electronics", "color": "Black", "datePosted": "2023-10-12",
+      "image": "https://images.bonanzastatic.com/afu/images/beee/5811/472c_9773945106/__57.jpg",
+      "description": "Black Texas Instruments graphing calculator."
+    },
+    {
+      "name": "Gym Bag", "category": "Bags and Backpacks", "color": "Red", "datePosted": "2023-10-14",
+      "image": "https://totalimagegroup.com.au/wp-content/uploads/2021/07/BA5193-657_2-768x768.jpg",
+      "description": "Red Nike gym bag with sports equipment inside."
+    },
+    {
+      "name": "Hoodie", "category": "Clothing", "color": "Blue", "datePosted": "2023-10-18",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/41cMWr7MMLL.jpg",
+      "description": "Blue zip-up hoodie with front pockets, size large."
+    },
+    {
+      "name": "Biological Textbook", "category": "Books and Notebooks", "color": "Green", "datePosted": "2023-10-21",
+      "image": "https://crm.scholarseries.com/product_images/1663599588807469280.jpg",
+      "description": "Scholar Series textbook titled 'Biology Subjective 11'."
+    },
+    {
+      "name": "Apple Smartwatch", "category": "Electronics", "color": "Black", "datePosted": "2023-10-24",
+      "image": "https://vergemagazine.co.uk/wp-content/uploads/2020/09/Apple_Watch_Series_6_LTE_44mm_Graphite_Stainless_Steel_Black_Sport_Band_PDP_Image_Position-1__WWEN-1-scaled.jpg",
+      "description": "Apple Watch Series 6 in black, size 44mm."
+    },
+    {
+      "name": "Earbuds", "category": "Electronics", "color": "White", "datePosted": "2023-10-25",
+      "image": "https://d2o7dtsnwzl7g9.cloudfront.net/tekzone/media/image/9f/87/d7/JLAB-JBUDS-AIR-WHITE-2.png",
+      "description": "White wireless earbuds in a charging case."
+    },
+    {
+      "name": "Water Bottle", "category": "Personal Items", "color": "Blue", "datePosted": "2023-10-27",
+      "image": "https://www.goldsprintshop.com/bilder/produkte/gross/Hydro-Flask-Insulated-Water-Bottle-18oz-Standard-Mouth_b5.jpg",
+      "description": "Blue Hydro Flask water bottle."
+    },
+    {
+      "name": "Bicycle Helmet", "category": "Miscellaneous", "color": "Black", "datePosted": "2023-10-30",
+      "image": "https://res.cloudinary.com/eastern/image/upload/w_1000,q_auto,f_auto/1300655_001_main.jpg",
+      "description": "Black bicycle helmet."
+    },
+    {
+      "name": "Wireless Keyboard", "category": "Electronics", "color": "White", "datePosted": "2023-11-1",
+      "image": "https://www.bhphotovideo.com/images/images500x500/logitech_920_009729_k380_multi_device_bluetooth_keyboard_1637584526_1576986.jpg",
+      "description": "White Logitech wireless keyboard, Bluetooth compatible."
+    },
+    {
+      "name": "Yoga Mat", "category": "Personal Items", "color": "Purple", "datePosted": "2023-11-1",
+      "image": "https://i5.walmartimages.com/asr/a0758ed1-b9c3-4e5b-88be-baf4ef9095b2_1.c2091094cc3071e19053f74c91e6fc06.jpeg",
+      "description": "Purple yoga mat."
+    },
+    {
+      "name": "USB Flash Drive", "category": "Electronics", "color": "Blue", "datePosted": "2023-11-3",
+      "image": "https://ke.jumia.is/unsafe/fit-in/0x0/filters:fill(white)/product/68/1292/2.jpg",
+      "description": "Blue 16GB USB flash drive with a keychain."
+    },
+    {
+      "name": "Bluetooth Speaker", "category": "Electronics", "color": "White", "datePosted": "2023-11-10",
+      "image": "https://www.bhphotovideo.com/images/images2000x2000/sony_srsxb10_wht_srsxb10_extra_bass_wireless_1319163.jpg",
+      "description": "White Sony portable Bluetooth speaker."
+    },
+    {
+      "name": "Lunch Bag", "category": "Personal Items", "color": "Gray", "datePosted": "2023-11-14",
+      "image": "https://images.lunchboxi.com/l-m/lunch-box-large-insulated-soft-cooler-cooling.jpg",
+      "description": "Gray insulated lunch bag."
+    },
+    {
+      "name": "Glasses", "category": "Personal Items", "color": "Black", "datePosted": "2023-11-21",
+      "image": "https://cdn10.bigcommerce.com/s-9gz6wy2gi6/products/202/images/1627/9603-main-single__46131.1489602559.1280.1280.jpg?c=2",
+      "description": "Black frame reading glasses, +1.50 magnification."
+    },
+    {
+      "name": "Portable Charger", "category": "Electronics", "color": "Black", "datePosted": "2023-11-22",
+      "image": "https://jbq.ae/public/upload/amC4cflHBinMVxRXcw44W07VIzydAqDJmqeFWThv.png",
+      "description": "Black portable charger with USB cable."
+    },
+    {
+      "name": "Running Shoes", "category": "Clothing", "color": "Gray", "datePosted": "2023-11-25",
+      "image": "https://images.prodirectsport.com/ProductImages/Main/158933.jpg",
+      "description": "Gray Nike running shoes."
+    },
+    {
+      "name": "Scientific Calculator", "category": "Electronics", "color": "Black", "datePosted": "2023-11-27",
+      "image": "https://cdnsta.avansas.com/mnresize/900/-/urun/europe1/88495/casio-fx-83gtx-scientific-calc-black-zoom-1.jpg",
+      "description": "Black Casio scientific calculator."
+    },
+    {
+      "name": "History Book", "category": "Books and Notebooks", "color": "Green", "datePosted": "2023-11-29",
+      "image": "https://www.bra.org/wp-content/uploads/guide-paper-bookhardback.jpg",
+      "description": "Green covered book on world history."
+    },
+    {
+      "name": "Smartwatch", "category": "Electronics", "color": "Black", "datePosted": "2023-12-1",
+      "image": "https://img.computerunivers.net/images/800/907837035A73F0D6FAAA408AAAB4BDB2.jpg",
+      "description": "Black smartwatch with fitness tracking features."
+    },
+    {
+      "name": "Umbrella", "category": "Miscellaneous", "color": "White", "datePosted": "2023-12-3",
+      "image": "https://www.umbrellaheaven.com/wp-content/uploads/2017/01/White-Minimax-Closed-800x800.jpg",
+      "description": "White folding umbrella."
+    }
+  ],
+
+  "defaultClaims": [
+    {
+      "firstName": "John", "lastName": "Doe", "email": "johndoe@hawaii.edu", "phone": "808-123-4567", "location": "Kuykendall 101", "time": "Tuesday 10:00am", "features": "Black backpack with a laptop inside.", "image": "https://images.journeys.com/images/products/1_623492_ZM.JPG", "comments": "I lost my backpack in Kuykendall 101 on Tuesday at 10:00am. I have the password to unlock it."
+    }
   ]
 }

@@ -4,7 +4,7 @@
   --matr-navbar-bg: black;
   --matr-navbar-bg-rgb: 13, 13, 13;
   --matr-navbar-text-color: white;
-  --matr-navbar-highlight-text: khaki;
+  --matr-navbar-highlight-text: #668f80;
 }
 
 body {
@@ -13,6 +13,8 @@ body {
   --bs-dark: var(--matr-navbar-bg);
   --bs-dark-rgb: var(--matr-navbar-bg-rgb);
   color: white !important; /*sorry, i couldn't figure this out without using !important*/
+  --bs-link-color-rgb: #198754 !important;
+  --bs-link-hover-color-rgb: #668f80 !important;
 }
 
 #signin-page .alert-light, #signup-page .alert-light {
@@ -46,10 +48,11 @@ body .navbar {
 
 .accordion-header {
   --bs-accordion-active-bg: #668F80;
-  --bs-accordion-btn-bg: #848fa5;
+  --bs-accordion-btn-bg: #515151;
   --bs-accordion-active-color: #ffffff;
   --bs-accordion-btn-color: #ffffff;
 }
+
 
 #signin-form-email, #signin-form-password {
   margin-top: 10px;
@@ -65,4 +68,29 @@ h3, .sign-in {
   font-family: 'Fira Sans', sans-serif;
   margin-left: 50px;
   margin-right: 50px;
+}
+
+.btn-primary {
+  --bs-btn-bg: #198754 !important;
+  --bs-btn-border-color: #198754 !important;
+  --bs-btn-hover-bg: #126940 !important;
+  --bs-btn-hover-border-color: #126940 !important;
+  --bs-btn-active-bg: #198754 !important;
+  --bs-btn-active-border-color: #198754 !important;
+  --bs-btn-disabled-bg: #668f80 !important;
+  --bs-btn-disabled-border-color: #668f80 !important;
+}
+
+.dropdown-item.active {
+  background-color: #668f80 !important;
+}
+
+.dropdown-menu {
+  --bs-dropdown-link-active-bg: #668f80 !important;
+}
+
+.alert-light {
+  --bs-alert-color: #198754 !important;
+  --bs-alert-bg: #0d0d0d !important;
+  --bs-link-hover-color-rgb: #668f80 !important;
 }

@@ -6,6 +6,7 @@ import { Roles } from 'meteor/alanning:roles';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { BoxArrowRight } from 'react-bootstrap-icons';
 
+
 const NavBar = () => {
   // useTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
   const { currentUser } = useTracker(() => ({
@@ -15,6 +16,7 @@ const NavBar = () => {
   return (
     <Navbar bg="dark" expand="lg">
       <Container>
+        <Search size={35} />
         <Navbar.Brand as={NavLink} to="/">
           <h2>Where&apos;s My Item?</h2>
         </Navbar.Brand>
@@ -24,7 +26,6 @@ const NavBar = () => {
             {currentUser ? ([
               <Nav.Link id="userpage-nav" as={NavLink} to="/userpage" key="userpage">Home</Nav.Link>,
               <Nav.Link id="list-item-nav" as={NavLink} to="/list" key="list">Found Items</Nav.Link>,
-              <Nav.Link id="claim-item-nav" as={NavLink} to="/claim" key="add">Claim Item</Nav.Link>,
             ]) : ''}
             {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
               <Nav.Link id="list-stuff-admin-nav" as={NavLink} to="/admin" key="admin">Admin</Nav.Link>

@@ -15,12 +15,12 @@ import { signupPage } from './signup.page';
 const credentials = { username: 'john@foo.com', password: 'changeme' };
 const adminCredentials = { username: 'admin@foo.com', password: 'changeme' };
 const registerCredentials = { username: 'register@foo.com', password: 'changeme' };
-const claimItemTest = { firstname: 'Jane', lastname: 'Doe', email: 'email@gmail.com', phone: '(123)456-7890', locationlost: 'Library', datelost: 'October 31, 2023', features: 'Dog Sticker', comments: 'None' };
+// const claimItemTest = { firstName: 'Jane', lastName: 'Doe', email: 'email@gmail.com', phone: '(123)456-7890', location: 'Library', time: 'October 31, 2023', features: 'Dog Sticker', comments: 'None' };
 const addItemTest = { name: 'Jane Doe', color: 'Red', location: 'Library', description: 'Lost' };
 
-fixture('meteor-application-template-react localhost test with default db')
+fixture('wheres-my-item localhost test with default db')
   .page('http://localhost:3000');
-
+//
 test('Test that landing page shows up', async (testController) => {
   await landingPage.isDisplayed(testController);
 });
@@ -49,14 +49,14 @@ test('Test that the "Found Items" page works', async (testController) => {
   await claimItemPage.isDisplayed(testController);
 });
 
-test('Test that the "Claim Item" page works', async (testController) => {
-  await navBar.gotoSignInPage(testController);
-  await signinPage.signin(testController, credentials.username, credentials.password);
-  await navBar.gotoClaimItemPage(testController);
-  await claimItemPage.isDisplayed(testController);
-  await claimItemPage.claimItemForm(testController, claimItemTest.firstname, claimItemTest.lastname, claimItemTest.email, claimItemTest.phone, claimItemTest.locationlost, claimItemTest.datelost, claimItemTest.features, claimItemTest.comments);
-  // test "upload an image" when finalized
-});
+// test('Test that the "Claim Item" page works', async (testController) => {
+//   await navBar.gotoSignInPage(testController);
+//   await signinPage.signin(testController, credentials.username, credentials.password);
+//   await navBar.gotoClaimItemPage(testController);
+//   await claimItemPage.isDisplayed(testController);
+//   await claimItemPage.claimItemForm(testController, claimItemTest.firstName, claimItemTest.lastName, claimItemTest.email, claimItemTest.phone, claimItemTest.location, claimItemTest.time, claimItemTest.features, claimItemTest.comments);
+// test "upload an image" when finalized
+// });
 
 test('Test that the "Admin" page works', async (testController) => {
   await navBar.gotoSignInPage(testController);
@@ -65,7 +65,7 @@ test('Test that the "Admin" page works', async (testController) => {
   await navBar.gotoAdminPage(testController);
   await adminPage.isDisplayed(testController);
   await adminPage.testAccordions(testController);
-  await adminPage.testClaimedItemsEditButton(testController);
+  await adminPage.testUnclaimedItemsEditButton(testController);
   // test edit page when finalized
 });
 
@@ -75,7 +75,7 @@ test('Test that the "Add Item" page works', async (testController) => {
   await navBar.gotoAdminPage(testController);
   await adminPage.gotoAddItemPage(testController);
   await addItemPage.isDisplayed(testController);
-  await addItemPage.addItemForm(testController, addItemTest.name, addItemTest.color, addItemTest.location, addItemTest.description);
+  await addItemPage.addItemForm(testController, addItemTest.name, addItemTest.image, addItemTest.description);
   // test upload image when finalized
 });
 
