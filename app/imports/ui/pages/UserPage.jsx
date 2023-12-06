@@ -57,7 +57,7 @@ const UserPage = () => (
             <Accordion.Header>Claiming Recovered Items</Accordion.Header>
             <Accordion.Body>
               {/* eslint-disable-next-line max-len */}
-              <p>Have you been notified that we&apos;ve found your item? Claiming it is easy. Visit our office at Kuykendall Hall with a valid ID and a description of the item. We&apos;ll verify your ownership and happily reunite you with your lost belonging.</p>
+              <p>Recovering your lost item is a simple process. Begin by accessing the ‘Claim Form’ section at the top of our webpage and fill out the necessary details. Once your form has been processed, we will send you a confirmation email. If you prefer, you can also visit us at Kuykendall Hall. Please bring a valid ID and a description of the item. After verifying your ownership, we will be more than happy to return your lost item.</p>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3">
