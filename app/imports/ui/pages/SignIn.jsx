@@ -4,7 +4,7 @@ import { Meteor } from 'meteor/meteor';
 import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
 import SimpleSchema from 'simpl-schema';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
-import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-bootstrap5';
+import { AutoForm, ErrorsField, TextField } from 'uniforms-bootstrap5';
 
 /**
  * Signin page overrides the form’s submit event and call Meteor’s loginWithPassword().
@@ -43,23 +43,29 @@ const SignIn = () => {
   return (
     <Container id="signin-page" className="py-3">
       <Row className="justify-content-center">
-        <Col xs={5}>
-          <Col className="text-center">
-            <h2>Login to your account</h2>
-          </Col>
+        <Col xs={4} className="mt-5">
           <AutoForm schema={bridge} onSubmit={data => submit(data)}>
             <Card>
               <Card.Body>
-                <TextField id="signin-form-email" name="email" placeholder="E-mail address" />
-                <TextField id="signin-form-password" name="password" placeholder="Password" type="password" />
+                <h3 className="text-center">Sign In</h3>
+                <div className="sign-in">
+                  <TextField id="signin-form-email" name="email" placeholder="Enter E-mail" />
+                  <TextField id="signin-form-password" name="password" placeholder="Enter Password" type="password" />
+                </div>
                 <ErrorsField />
-                <SubmitField id="signin-form-submit" />
+                <div className="d-grid">
+                  <button type="submit" className="btn btn-primary my-4">
+                    Submit
+                  </button>
+                </div>
               </Card.Body>
+              <Alert>
+                <div className="text-center">
+                  <Link to="/signup">Click here to Register</Link>
+                </div>
+              </Alert>
             </Card>
           </AutoForm>
-          <Alert variant="light">
-            <Link to="/signup">Click here to Register</Link>
-          </Alert>
           {error === '' ? (
             ''
           ) : (
