@@ -5,7 +5,7 @@ import { Accounts } from 'meteor/accounts-base';
 import { Alert, Card, Col, Container, Row } from 'react-bootstrap';
 import SimpleSchema from 'simpl-schema';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
-import { AutoForm, ErrorsField, SubmitField, TextField } from 'uniforms-bootstrap5';
+import { AutoForm, ErrorsField, TextField } from 'uniforms-bootstrap5';
 
 /**
  * SignUp component is similar to signin component, but we create a new user instead.
@@ -42,25 +42,31 @@ const SignUp = ({ location }) => {
   return (
     <Container id="signup-page" className="py-3">
       <Row className="justify-content-center">
-        <Col xs={5}>
-          <Col className="text-center">
-            <h2>Register your account</h2>
-          </Col>
+        <Col xs={4} className="mt-5">
           <AutoForm schema={bridge} onSubmit={data => submit(data)}>
             <Card>
               <Card.Body>
-                <TextField id="signup-form-email" name="email" placeholder="E-mail address" />
-                <TextField id="signup-form-password" name="password" placeholder="Password" type="password" />
+                <h3 className="text-center">Register Your Account</h3>
+                <div className="register">
+                  <TextField id="signup-form-email" name="email" placeholder="E-mail address" />
+                  <TextField id="signup-form-password" name="password" placeholder="Password" type="password" />
+                </div>
                 <ErrorsField />
-                <SubmitField id="signup-form-submit" />
+                <div className="d-grid">
+                  <button id="signupsubmit" type="submit" className="btn btn-primary my-4">
+                    Submit
+                  </button>
+                </div>
               </Card.Body>
+              <Alert>
+                <div className="text-center">
+                  Already have an account? Login
+                  {' '}
+                  <Link to="/signin">here!</Link>
+                </div>
+              </Alert>
             </Card>
           </AutoForm>
-          <Alert variant="light">
-            Already have an account? Login
-            {' '}
-            <Link to="/signin">here</Link>
-          </Alert>
           {error === '' ? (
             ''
           ) : (

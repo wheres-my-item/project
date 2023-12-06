@@ -54,13 +54,13 @@ const SignIn = () => {
                 </div>
                 <ErrorsField />
                 <div className="d-grid">
-                  <button type="submit" className="btn btn-primary my-4">
+                  <button id="signin-submit" type="submit" className="btn btn-primary my-4">
                     Submit
                   </button>
                 </div>
               </Card.Body>
               <Alert>
-                <div className="text-center">
+                <div id="register" className="text-center">
                   <Link to="/signup">Click here to Register</Link>
                 </div>
               </Alert>

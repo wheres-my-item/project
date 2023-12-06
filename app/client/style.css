@@ -53,8 +53,7 @@ body .navbar {
   --bs-accordion-btn-color: #ffffff;
 }
 
-
-#signin-form-email, #signin-form-password {
+#signin-form-email, #signin-form-password, #signup-form-email, #signup-form-password {
   margin-top: 10px;
 }
 
@@ -63,7 +62,7 @@ body .navbar {
   box-sizing: border-box;
 }
 
-h3, .sign-in {
+h3, .sign-in, .register {
   font-weight: bolder;
   font-family: 'Fira Sans', sans-serif;
   margin-left: 50px;

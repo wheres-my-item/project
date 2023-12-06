@@ -16,7 +16,7 @@ class SignupPage {
     await this.isDisplayed(testController);
     await testController.typeText('#signup-form-email', username);
     await testController.typeText('#signup-form-password', password);
-    await testController.click('#signup-form-submit input.btn.btn-primary');
+    await testController.click('#signupsubmit');
     // await navBar.isLoggedIn(testController, username);
     // ^ re-enable this later, commented it out because there's a built-in check for whether an account shares the same username
   }

@@ -12,7 +12,6 @@ const NavBar = () => {
   const { currentUser } = useTracker(() => ({
     currentUser: Meteor.user() ? Meteor.user().username : '',
   }), []);
-
   return (
     <Navbar bg="dark" expand="lg">
       <Container>
@@ -33,7 +32,7 @@ const NavBar = () => {
           </Nav>
           <Nav className="justify-content-end">
             {currentUser === '' ? ([
-              <button type="button" href="#signin" className="btn btn-outline-secondary btn-sm fw-bolder" onClick={() => { window.location.href = '/signin'; }}>
+              <button type="button" id="signin" href="#signin" className="btn btn-outline-secondary btn-sm fw-bolder" onClick={() => { window.location.href = '/signin'; }}>
                 <Nav.Link id="userpage-nav" as={NavLink} to="/signin" key="userpage" className="mx-3">Sign In</Nav.Link>
               </button>,
             ]) : (
