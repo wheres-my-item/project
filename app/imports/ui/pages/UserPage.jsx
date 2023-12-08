@@ -64,7 +64,7 @@ const UserPage = () => (
             <Accordion.Header>Lost and Found Policies</Accordion.Header>
             <Accordion.Body>
               {/* eslint-disable-next-line max-len */}
-              <p>It&apos;s important to understand our policies regarding lost and found items. Items turned in are held for a specific period as per campus regulations. Unclaimed items may eventually be donated or disposed of. For detailed information on these policies, please contact our office.</p>
+              <p>It&apos;s important to understand our policies regarding lost and found items. Items turned in are held for 31 days as per campus regulations. Unclaimed items are then donated or disposed of. For detailed information on these policies, please contact our office.</p>
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>

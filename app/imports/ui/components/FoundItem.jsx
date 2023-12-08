@@ -12,6 +12,7 @@ const FoundItem = ({ item }) => (
       <Card.Subtitle>{item.category}</Card.Subtitle>
       <Card.Subtitle>{item.color}</Card.Subtitle>
       <Card.Subtitle>{item.datePosted}</Card.Subtitle>
+      <Card.Subtitle>Donation Date: {item.expirationDate.toLocaleDateString()}</Card.Subtitle>
     </Card.Header>
     <Card.Body>
       <Card.Text>{item.description}</Card.Text>
@@ -34,6 +35,7 @@ FoundItem.propTypes = {
     datePosted: PropTypes.string,
     image: PropTypes.string,
     description: PropTypes.string,
+    expirationDate: PropTypes.instanceOf(Date),
     // _id: PropTypes.string,
   }).isRequired,
 };
