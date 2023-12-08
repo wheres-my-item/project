@@ -33,3 +33,16 @@ if (Items.collection.find().count() === 0) {
     itemIds = Meteor.settings.defaultItems.map(item => addItems(item));
   }
 }
+
+const createTTLIndex = () => {
+  const collection = Items.collection.rawCollection();
+  const indexExists = Meteor.wrapAsync(collection.indexExists.bind(collection))('expirationDate_1');
+
+  if (!indexExists) {
+    Meteor.wrapAsync(collection.createIndex.bind(collection))({ expirationDate: 1 }, { expireAfterSeconds: 0 });
+  }
+};
+
+Meteor.startup(() => {
+  createTTLIndex();
+});

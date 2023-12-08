@@ -26,6 +26,17 @@ class ItemsCollection {
       datePosted: String,
       image: String,
       description: String,
+      expirationDate: {
+        type: Date,
+        autoValue: function () {
+          if (this.isInsert) {
+            const expirationDate = new Date();
+            expirationDate.setDate(expirationDate.getDate() + 31);
+            return expirationDate;
+          }
+          return undefined;
+        },
+      },
     });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);
