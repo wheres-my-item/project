@@ -14,6 +14,14 @@ class FoundItemsPage {
   async claimThisItem(testController) {
     await testController.click('#claim-button');
   }
+
+  async filterTest(testController) {
+    await testController.click('#dropdown-basic');
+    await testController.click('#check-Clothing');
+    await testController.click('#check-Electronics');
+    await testController.click('#check-Clothing');
+    await testController.click('#check-Electronics');
+  }
 }
 
 export const foundItemsPage = new FoundItemsPage();
