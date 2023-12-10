@@ -231,7 +231,13 @@
 
   "defaultClaims": [
     {
-      "firstName": "John", "lastName": "Doe", "email": "johndoe@hawaii.edu", "phone": "808-123-4567", "location": "Kuykendall 101", "time": "Tuesday 10:00am", "features": "Black backpack with a laptop inside.", "image": "https://images.journeys.com/images/products/1_623492_ZM.JPG", "comments": "I lost my backpack in Kuykendall 101 on Tuesday at 10:00am. I have the password to unlock it."
+      "firstName": "John", "lastName": "Doe", "email": "johndoe@hawaii.edu", "phone": "808-123-4567", "location": "Kuykendall 101", "time": "Tuesday 10:00am", "features": "Black backpack with a laptop inside.", "comments": "I lost my backpack in Kuykendall 101 on Tuesday at 10:00am. I have the password to unlock it."
+    },
+    {
+      "firstName": "Tom", "lastName": "Smith", "email": "toms@hawaii.edu", "phone": "808-222-4567", "location": "Hamilton Library", "time": "Sometime last week", "features": "Macbook Pro.", "comments": "I have files inside that can identify me as the owner."
+    },
+    {
+      "firstName": "Kai", "lastName": "Lee", "email": "kailee@hawaii.edu", "phone": "808-123-8888", "location": "ICSpace", "time": "Wednesday Evening", "features": "Yeti Bottle.", "comments": "I do not have any distinguishing features but I can recognize it."
     }
   ]
 }
