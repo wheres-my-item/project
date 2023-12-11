@@ -61,6 +61,11 @@ const FoundItems = () => {
       return sortOrder === 'ascending' ? dateA - dateB : dateB - dateA;
     });
 
+  const resetFilters = () => {
+    setSelectedCategories([]);
+    setSelectedColors([]);
+  };
+
   return ready ? (
     <Container id="found-items-page" className="py-3">
       <Row className="justify-content-center">
@@ -106,6 +111,11 @@ const FoundItems = () => {
               </Dropdown.Menu>
             </div>
           )}
+        </Col>
+        <Col md="auto">
+          <Button variant="success" onClick={resetFilters}>
+            Reset Filters
+          </Button>
         </Col>
         <Col md="auto">
           <Button onClick={toggleSortOrder}>Sort by Date ({sortOrder})</Button>
