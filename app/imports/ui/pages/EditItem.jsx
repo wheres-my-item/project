@@ -1,17 +1,18 @@
 import React from 'react';
 import swal from 'sweetalert';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Card, Col, Container, Row, Button } from 'react-bootstrap';
 import { AutoForm, ErrorsField, HiddenField, SelectField, SubmitField, TextField } from 'uniforms-bootstrap5';
 import { Meteor } from 'meteor/meteor';
 import { useTracker } from 'meteor/react-meteor-data';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
-import { useParams } from 'react-router';
+import { useParams, useNavigate } from 'react-router';
 import { Items } from '../../api/items/Items';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 const bridge = new SimpleSchema2Bridge(Items.schema);
 
 const EditItem = () => {
+  const navigate = useNavigate(); // Initialize useHistory
   const { _id } = useParams();
   const { item, ready } = useTracker(() => {
     const subscription = Meteor.subscribe(Items.userPublicationName);
@@ -30,6 +31,27 @@ const EditItem = () => {
       swal('Success', 'Item updated successfully', 'success')));
   };
 
+  const handleDelete = () => {
+    swal({
+      title: 'Are you sure?',
+      text: 'Once deleted, you will not be able to recover this lost item!',
+      icon: 'warning',
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        Items.collection.remove(_id, (error) => {
+          if (error) {
+            swal('Error', error.message, 'error');
+          } else {
+            swal('Success', 'Item deleted successfully.', 'success');
+            navigate('/admin');
+          }
+        });
+      }
+    });
+  };
+
   return ready ? (
     <Container className="py-3">
       <Row className="justify-content-center">
@@ -43,7 +65,14 @@ const EditItem = () => {
                 <SelectField name="color" />
                 <TextField name="description" />
                 <TextField name="image" />
-                <SubmitField value="Submit" />
+                <Row>
+                  <Col>
+                    <SubmitField value="Submit" />
+                  </Col>
+                  <Col>
+                    <Button variant="danger" onClick={handleDelete}>Delete</Button>
+                  </Col>
+                </Row>
                 <ErrorsField />
                 <HiddenField name="expirationDate" />
               </Card.Body>
