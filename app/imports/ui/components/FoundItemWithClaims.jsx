@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Image, Button } from 'react-bootstrap';
 import { Claims } from '../../api/claims/Claims';
+import { Link } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 const FoundItemWithClaims = ({ item }) => {
@@ -37,7 +38,9 @@ const FoundItemWithClaims = ({ item }) => {
           )}
         </div>
         <div className="d-grid gap-2">
-          <Button id="unclaimed-items-edit-button" variant="outline-success">Edit</Button>{' '}
+          <Link to={`/edit/${item._id}`}>
+            <Button id="unclaimed-items-edit-button" variant="outline-success">Edit</Button>{' '}
+          </Link>
         </div>
       </Card.Body>
     </Card>

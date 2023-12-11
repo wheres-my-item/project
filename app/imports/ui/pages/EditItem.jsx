@@ -12,7 +12,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 const bridge = new SimpleSchema2Bridge(Items.schema);
 
 const EditItem = () => {
-  const navigate = useNavigate(); // Initialize useHistory
+  const navigate = useNavigate();
   const { _id } = useParams();
   const { item, ready } = useTracker(() => {
     const subscription = Meteor.subscribe(Items.userPublicationName);
@@ -29,6 +29,7 @@ const EditItem = () => {
     Items.collection.update(_id, { $set: { name, category, color, description, image } }, (error) => (error ?
       swal('Error', error.message, 'error') :
       swal('Success', 'Item updated successfully', 'success')));
+    navigate('/admin');
   };
 
   const handleDelete = () => {
