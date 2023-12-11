@@ -15,6 +15,11 @@ class ClaimsCollection {
       phone: String,
       location: String,
       time: String,
+      image: {
+        type: String,
+        optional: true,
+        defaultValue: 'No image provided.',
+      },
       features: String,
       comments: String,
     });

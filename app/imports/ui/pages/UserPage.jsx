@@ -40,28 +40,28 @@ const UserPage = () => (
         <p> </p>
         <Accordion defaultActiveKey={['0']} alwaysOpen>
           <Accordion.Item eventKey="0">
-            <Accordion.Header>Reporting Lost Items</Accordion.Header>
+            <Accordion.Header id="accordion1">Reporting Lost Items</Accordion.Header>
             <Accordion.Body>
               {/* eslint-disable-next-line max-len */}
               <p>If you&apos;ve lost an item on campus, the UH Manoa Lost Item Office is here to assist you. Please contact us at 808-123-4567 to report your lost item. Provide a detailed description of the item, the date and location it was last seen, and any other relevant information. We maintain a comprehensive database of found items and will do our utmost to reunite you with your belongings.</p>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
-            <Accordion.Header>Turning in Found Items</Accordion.Header>
+            <Accordion.Header id="accordion2">Turning in Found Items</Accordion.Header>
             <Accordion.Body>
               {/* eslint-disable-next-line max-len */}
               <p>Found something that doesn&apos;t belong to you? Your integrity in turning in found items helps keep our community honest and supportive. Bring the item to our office located at Kuykendall Hall, or contact us at 808-123-4567 for further instructions. Your action can make a significant difference to someone who&apos;s lost something important.</p>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="2">
-            <Accordion.Header>Claiming Recovered Items</Accordion.Header>
+            <Accordion.Header id="accordion3">Claiming Recovered Items</Accordion.Header>
             <Accordion.Body>
               {/* eslint-disable-next-line max-len */}
               <p>Recovering your lost item is a simple process. Begin by accessing the ‘Claim Form’ section at the top of our webpage and fill out the necessary details. Once your form has been processed, we will send you a confirmation email. If you prefer, you can also visit us at Kuykendall Hall. Please bring a valid ID and a description of the item. After verifying your ownership, we will be more than happy to return your lost item.</p>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3">
-            <Accordion.Header>Lost and Found Policies</Accordion.Header>
+            <Accordion.Header id="accordion4">Lost and Found Policies</Accordion.Header>
             <Accordion.Body>
               {/* eslint-disable-next-line max-len */}
               <p>It&apos;s important to understand our policies regarding lost and found items. Items turned in are held for 31 days as per campus regulations. Unclaimed items are then donated or disposed of. For detailed information on these policies, please contact our office.</p>

@@ -6,7 +6,7 @@ import { Roles } from 'meteor/alanning:roles';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
-import EditStuff from '../pages/EditStuff';
+import EditItem from '../pages/EditItem';
 import NotFound from '../pages/NotFound';
 import SignUp from '../pages/SignUp';
 import SignOut from '../pages/SignOut';
@@ -19,6 +19,7 @@ import FoundItems from '../pages/FoundItems';
 import Admin from '../pages/Admin';
 import AddItem from '../pages/AddItem';
 import ClaimForm from '../pages/ClaimForm';
+import EditClaim from '../pages/EditClaim';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 const App = () => {
@@ -42,7 +43,8 @@ const App = () => {
           <Route path="/list" element={<ProtectedRoute><FoundItems /></ProtectedRoute>} />
           <Route path="/claim/:itemId" element={<ProtectedRoute><ClaimForm /></ProtectedRoute>} />
           <Route path="/add" element={<AdminProtectedRoute ready={ready}><AddItem /></AdminProtectedRoute>} />
-          <Route path="/edit/:_id" element={<ProtectedRoute><EditStuff /></ProtectedRoute>} />
+          <Route path="/edit/:_id" element={<ProtectedRoute><EditItem /></ProtectedRoute>} />
+          <Route path="/viewclaim/:_id" element={<ProtectedRoute><EditClaim /></ProtectedRoute>} />
           <Route path="/admin" element={<AdminProtectedRoute ready={ready}><Admin /></AdminProtectedRoute>} />
           <Route path="/notauthorized" element={<NotAuthorized />} />
           <Route path="*" element={<NotFound />} />
