@@ -13,12 +13,13 @@ const ClaimItem = () => {
     phone: '',
     location: '',
     time: '',
+    image: '',
     features: '',
     comments: '',
   });
 
   const [message, setMessage] = useState('');
-
+  const [isUploadingImage, setIsUploadingImage] = useState(false);
   const idToStateKeyMap = {
     'first-name-form': 'firstName',
     'last-name-form': 'lastName',
@@ -28,6 +29,25 @@ const ClaimItem = () => {
     'date-lost-form': 'time',
     'features-form': 'features',
     'comments-form': 'comments',
+  };
+
+  const uploadImage = async (file) => {
+    const uploadFormData = new FormData(); // Renamed to uploadFormData
+    uploadFormData.append('file', file);
+    uploadFormData.append('upload_preset', 'nngnhubm');
+
+    try {
+      const response = await fetch('https://api.cloudinary.com/v1_1/dt3ouzyus/image/upload', {
+        method: 'POST',
+        body: uploadFormData, // Updated to use uploadFormData
+      });
+
+      const data = await response.json();
+      return data.url;
+    } catch (error) {
+      setMessage(`Error: ${error.message}`);
+      return null;
+    }
   };
 
   const handleChange = (e) => {
@@ -40,11 +60,12 @@ const ClaimItem = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (isUploadingImage) return;
     Meteor.call('claims.insert', formData, (error) => {
       if (error) {
-        setMessage(`Error: ${error.message}`); // Set error message
+        setMessage(`Error: ${error.message}`);
       } else {
-        setMessage('Claim submitted successfully'); // Set success message
+        setMessage('Claim submitted successfully');
         setFormData({
           itemId: '',
           firstName: '',
@@ -53,11 +74,24 @@ const ClaimItem = () => {
           phone: '',
           location: '',
           time: '',
+          image: '',
           features: '',
           comments: '',
         }); // Reset form fields
       }
     });
+  };
+
+  const handleImageChange = async (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setIsUploadingImage(true); // Set uploading state to true
+      const imageUrl = await uploadImage(file);
+      setIsUploadingImage(false); // Set uploading state to false after upload is done
+      if (imageUrl) {
+        setFormData({ ...formData, image: imageUrl });
+      }
+    }
   };
 
   return (
@@ -72,7 +106,6 @@ const ClaimItem = () => {
           </Col>
         </Row>
         <Form onSubmit={handleSubmit}>
-          {/* Form Fields */}
           <Row>
             <Form.Group as={Col} md="6" className="mb-3">
               <Form.Label>First Name</Form.Label>
@@ -109,8 +142,17 @@ const ClaimItem = () => {
             <Form.Label>Comments</Form.Label>
             <Form.Control id="comments-form" value={formData.comments} onChange={handleChange} placeholder="Example: I know the password for the device." />
           </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Image Upload (optional)</Form.Label>
+            <Form.Control
+              type="file"
+              id="claim-image-upload"
+              onChange={handleImageChange}
+              accept="image/*" // Accept only image files
+            />
+          </Form.Group>
           <div className="d-grid gap-2">
-            <Button id="submit-button" variant="success" type="submit">Submit Form</Button>
+            <Button id="submit-button" variant="success" type="submit" disabled={isUploadingImage}>Submit Form</Button>
           </div>
         </Form>
         {message && <Alert variant={message.startsWith('Error') ? 'danger' : 'success'}>{message}</Alert>}
