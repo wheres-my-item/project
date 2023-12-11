@@ -12,7 +12,9 @@ const FoundItem = ({ item }) => (
       <Card.Subtitle>{item.category}</Card.Subtitle>
       <Card.Subtitle>{item.color}</Card.Subtitle>
       <Card.Subtitle>{item.datePosted}</Card.Subtitle>
-      <Card.Subtitle>Donation Date: {item.expirationDate.toLocaleDateString()}</Card.Subtitle>
+      <Card.Subtitle>
+        Donation Date: {new Date(item.expirationDate).toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' })}
+      </Card.Subtitle>
     </Card.Header>
     <Card.Body>
       <Card.Text>{item.description}</Card.Text>

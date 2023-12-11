@@ -28,12 +28,13 @@ class ItemsCollection {
       description: String,
       expirationDate: {
         type: Date,
-        autoValue: function () {
-          if (this.isInsert) {
-            const expirationDate = new Date();
-            expirationDate.setDate(expirationDate.getDate() + 31);
+        autoValue() {
+          if (!this.isSet) {
+            const currentDate = new Date();
+            const expirationDate = new Date(currentDate.setDate(currentDate.getDate() + 31));
             return expirationDate;
           }
+
           return undefined;
         },
       },
