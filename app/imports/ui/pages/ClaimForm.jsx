@@ -131,7 +131,7 @@ const ClaimItem = () => {
             <Form.Control id="location-lost-form" value={formData.location} onChange={handleChange} placeholder="Example: I forgot this in Hamilton Library." />
           </Form.Group>
           <Form.Group className="mb-3">
-            <Form.Label>Time</Form.Label>
+            <Form.Label>Time and Date</Form.Label>
             <Form.Control id="date-lost-form" value={formData.time} onChange={handleChange} placeholder="Example: I realized it was missing on Wednesday Nov 5. I think I forgot it on Tuesday." />
           </Form.Group>
           <Form.Group className="mb-3">
