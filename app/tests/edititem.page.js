@@ -1,8 +1,8 @@
 import { Selector } from 'testcafe';
 
-class FoundItemsPage {
+class EditItemPage {
   constructor() {
-    this.pageId = '#found-items-page';
+    this.pageId = '#edit-item-page';
     this.pageSelector = Selector(this.pageId);
   }
 
@@ -11,9 +11,6 @@ class FoundItemsPage {
     await testController.expect(this.pageSelector.exists).ok();
   }
 
-  async claimThisItem(testController) {
-    await testController.click('#claim-button');
-  }
 }
 
-export const foundItemsPage = new FoundItemsPage();
+export const editItemPage = new EditItemPage();

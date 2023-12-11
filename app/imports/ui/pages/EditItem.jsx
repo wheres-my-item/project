@@ -54,7 +54,7 @@ const EditItem = () => {
   };
 
   return ready ? (
-    <Container className="py-3">
+    <Container id="edit-item-page" className="py-3">
       <Row className="justify-content-center">
         <Col xs={5}>
           <Col className="text-center"><h2>Edit Lost Item</h2></Col>
