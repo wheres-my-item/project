@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Image, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 const FoundItemEdit = ({ item }) => (
@@ -16,7 +17,10 @@ const FoundItemEdit = ({ item }) => (
     <Card.Body>
       <Card.Text>{item.description}</Card.Text>
       <div className="d-grid gap-2">
-        <Button id="unclaimed-items-edit-button" variant="outline-success">Edit</Button>{' '}
+        {/* eslint-disable-next-line react/prop-types */}
+        <Link to={`/edit/${item._id}`}>
+          <Button id="unclaimed-items-edit-button" variant="outline-success">Edit</Button>{' '}
+        </Link>
       </div>
     </Card.Body>
   </Card>
