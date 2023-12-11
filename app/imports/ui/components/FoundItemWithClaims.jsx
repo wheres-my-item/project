@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Image, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { Claims } from '../../api/claims/Claims';
 import { Link } from 'react-router-dom';
 
