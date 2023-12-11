@@ -28,7 +28,9 @@ const FoundItemWithClaims = ({ item }) => {
               <ul>
                 {claims.map((claim) => (
                   <li key={claim._id}>
-                    <p>{`${claim.firstName} ${claim.lastName} - ${claim.email}`}</p>
+                    <Link to={`/viewclaim/${claim._id}`}>
+                      <p>{`${claim.firstName} ${claim.lastName} - ${claim.email}`}</p>
+                    </Link>
                   </li>
                 ))}
               </ul>
