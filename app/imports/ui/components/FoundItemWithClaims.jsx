@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, Image, Button } from 'react-bootstrap';
-import { Claims } from '../../api/claims/Claims';
 import { Link } from 'react-router-dom';
+import { Claims } from '../../api/claims/Claims';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 const FoundItemWithClaims = ({ item }) => {
