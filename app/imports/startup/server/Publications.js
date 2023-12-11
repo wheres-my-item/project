@@ -1,4 +1,5 @@
 import { Meteor } from 'meteor/meteor';
+import { check, Match } from 'meteor/check';
 import { Roles } from 'meteor/alanning:roles';
 import { Stuffs } from '../../api/stuff/Stuff';
 import { Items } from '../../api/items/Items';
@@ -25,9 +26,19 @@ Meteor.publish(Items.adminPublicationName, function () {
 // Admin-level publication.
 // Publish all claims for requested item.
 // eslint-disable-next-line meteor/audit-argument-checks
+// Meteor.publish(Claims.adminPublicationName, function publish(itemId) {
+//   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
+//     return Claims.collection.find({ itemId });
+//   }
+//   return this.ready();
+// });
 Meteor.publish(Claims.adminPublicationName, function publish(itemId) {
+  check(itemId, Match.Maybe(String));
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
-    return Claims.collection.find({ itemId });
+    if (itemId) {
+      return Claims.collection.find({ itemId });
+    }
+    return [];
   }
   return this.ready();
 });
