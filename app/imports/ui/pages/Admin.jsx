@@ -54,27 +54,6 @@ const Admin = () => {
                   <Row sm={1} md={2} lg={3} className="g-4">
                     {itemsWithoutClaims.map((item) => <Col key={item._id}><FoundItemEdit item={item} /></Col>)}
                   </Row>
-                  <Row className="justify-content-center mt-4">
-                    <Col md={14}>
-                      <h2>Manage Lost Items</h2>
-                      <Accordion defaultActiveKey={['0']} alwaysOpen>
-                        {items.map((item) => (
-                          <Accordion.Item key={item._id} eventKey={item._id}>
-                            <Accordion.Header>
-                              <h5>{item.name}</h5>
-                            </Accordion.Header>
-                            <Accordion.Body>
-                              {itemHasClaims(item) ? (
-                                <FoundItemWithClaims item={item} claims={claims.filter(claim => claim.itemId === item._id)} />
-                              ) : (
-                                <p>No claims for this item.</p>
-                              )}
-                            </Accordion.Body>
-                          </Accordion.Item>
-                        ))}
-                      </Accordion>
-                    </Col>
-                  </Row>
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
