@@ -44,7 +44,7 @@ Meteor.setTimeout(() => {
   if (Claims.collection.find().count() === 0 && Meteor.settings.defaultClaims) {
     console.log('Creating default claims.');
 
-    const itemIds = Items.collection.find({}, { limit: 5 }).map(item => item._id);
+    const itemIds = Items.collection.find({}, { limit: 10 }).map(item => item._id);
     Meteor.settings.defaultClaims.forEach((claim, index) => {
       if (itemIds[index]) {
         const claimWithItemId = { ...claim, itemId: itemIds[index] };
