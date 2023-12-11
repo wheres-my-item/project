@@ -38,7 +38,7 @@ Meteor.publish(Claims.adminPublicationName, function publish(itemId) {
     if (itemId) {
       return Claims.collection.find({ itemId });
     }
-    return [];
+    return Claims.collection.find({});
   }
   return this.ready();
 });
